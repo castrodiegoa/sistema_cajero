@@ -1,17 +1,73 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\OneDrive\\Documentos\\Ingenieria de Sistemas\\Periodo 2024 - II\\Sistemas de Información\\CORTE I\\Actividades\\sistema_cajero\\sistema_cajero\\GUI.csproj": {}
+    "C:\\Sistemasdeinformacion\\sistema_cajero\\sistema_cajero\\GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\OneDrive\\Documentos\\Ingenieria de Sistemas\\Periodo 2024 - II\\Sistemas de Información\\CORTE I\\Actividades\\sistema_cajero\\sistema_cajero\\GUI.csproj": {
+    "C:\\Sistemasdeinformacion\\sistema_cajero\\BLL\\BLL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Sistemasdeinformacion\\sistema_cajero\\BLL\\BLL.csproj",
+        "projectName": "BLL",
+        "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\BLL\\BLL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Sistemasdeinformacion\\sistema_cajero\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\DAL\\DAL.csproj"
+              },
+              "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Sistemasdeinformacion\\sistema_cajero\\DAL\\DAL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Sistemasdeinformacion\\sistema_cajero\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\DAL\\DAL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Sistemasdeinformacion\\sistema_cajero\\sistema_cajero\\GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\OneDrive\\Documentos\\Ingenieria de Sistemas\\Periodo 2024 - II\\Sistemas de Información\\CORTE I\\Actividades\\sistema_cajero\\sistema_cajero\\GUI.csproj",
+        "projectUniqueName": "C:\\Sistemasdeinformacion\\sistema_cajero\\sistema_cajero\\GUI.csproj",
         "projectName": "GUI",
-        "projectPath": "C:\\Users\\diego\\OneDrive\\Documentos\\Ingenieria de Sistemas\\Periodo 2024 - II\\Sistemas de Información\\CORTE I\\Actividades\\sistema_cajero\\sistema_cajero\\GUI.csproj",
+        "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\sistema_cajero\\GUI.csproj",
         "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\OneDrive\\Documentos\\Ingenieria de Sistemas\\Periodo 2024 - II\\Sistemas de Información\\CORTE I\\Actividades\\sistema_cajero\\sistema_cajero\\obj\\",
+        "outputPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\sistema_cajero\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,7 +83,14 @@
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Sistemasdeinformacion\\sistema_cajero\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\BLL\\BLL.csproj"
+              },
+              "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Sistemasdeinformacion\\sistema_cajero\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
