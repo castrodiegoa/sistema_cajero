@@ -45,6 +45,13 @@ namespace sistema_cajero
                     return;
                 }
 
+                // Validar número de tarjeta
+                if (!ValidationHelper.IsCardNumberValid(cardNumber))
+                {
+                    MessageBox.Show("Por favor, ingrese un número de tarjeta válido. (11 dígitos)");
+                    return;
+                }
+
                 // Loguear la tarjeta en la base de datos
                 var response = debitCardService.AuthenticateDebitCard(cardNumber, password);
 

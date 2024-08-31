@@ -6,7 +6,6 @@ C:\Sistemasdeinformacion\sistema_cajero\BLL\bin\Debug\DAL.pdb
 C:\Sistemasdeinformacion\sistema_cajero\BLL\bin\Debug\Entities.pdb
 C:\Sistemasdeinformacion\sistema_cajero\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 C:\Sistemasdeinformacion\sistema_cajero\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-C:\Sistemasdeinformacion\sistema_cajero\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Sistemasdeinformacion\sistema_cajero\BLL\obj\Debug\BLL.dll
 C:\Sistemasdeinformacion\sistema_cajero\BLL\obj\Debug\BLL.pdb
 C:\Sistemasdeinformacion\sistema_cajero\BLL\bin\Debug\BLL.dll.config
@@ -37,3 +36,4 @@ C:\Sistemasdeinformacion\sistema_cajero\BLL\bin\Debug\K4os.Compression.LZ4.xml
 C:\Sistemasdeinformacion\sistema_cajero\BLL\bin\Debug\System.IO.Pipelines.xml
 C:\Sistemasdeinformacion\sistema_cajero\BLL\bin\Debug\K4os.Hash.xxHash.xml
 C:\Sistemasdeinformacion\sistema_cajero\BLL\bin\Debug\System.Numerics.Vectors.xml
+C:\Sistemasdeinformacion\sistema_cajero\BLL\obj\Debug\BLL.csproj.Up2Date

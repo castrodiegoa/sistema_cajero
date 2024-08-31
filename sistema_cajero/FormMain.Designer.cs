@@ -36,7 +36,7 @@
             btnAboutAtm = new Button();
             btnAbout = new Button();
             panelNequiSubmenu = new Panel();
-            btnRechargeNequi = new Button();
+            btnLoginNequi = new Button();
             btnRegisterNequi = new Button();
             btnNequi = new Button();
             panelManageDebitCardSubmenu = new Panel();
@@ -157,7 +157,7 @@
             // panelNequiSubmenu
             // 
             panelNequiSubmenu.BackColor = Color.FromArgb(35, 32, 39);
-            panelNequiSubmenu.Controls.Add(btnRechargeNequi);
+            panelNequiSubmenu.Controls.Add(btnLoginNequi);
             panelNequiSubmenu.Controls.Add(btnRegisterNequi);
             panelNequiSubmenu.Dock = DockStyle.Top;
             panelNequiSubmenu.Location = new Point(0, 405);
@@ -165,21 +165,21 @@
             panelNequiSubmenu.Size = new Size(250, 85);
             panelNequiSubmenu.TabIndex = 5;
             // 
-            // btnRechargeNequi
+            // btnLoginNequi
             // 
-            btnRechargeNequi.Dock = DockStyle.Top;
-            btnRechargeNequi.FlatAppearance.BorderSize = 0;
-            btnRechargeNequi.FlatStyle = FlatStyle.Flat;
-            btnRechargeNequi.ForeColor = Color.Gainsboro;
-            btnRechargeNequi.Location = new Point(0, 40);
-            btnRechargeNequi.Name = "btnRechargeNequi";
-            btnRechargeNequi.Padding = new Padding(35, 0, 0, 0);
-            btnRechargeNequi.Size = new Size(250, 40);
-            btnRechargeNequi.TabIndex = 2;
-            btnRechargeNequi.Text = "Recargar";
-            btnRechargeNequi.TextAlign = ContentAlignment.MiddleLeft;
-            btnRechargeNequi.UseVisualStyleBackColor = true;
-            btnRechargeNequi.Click += btnRechargeNequi_Click;
+            btnLoginNequi.Dock = DockStyle.Top;
+            btnLoginNequi.FlatAppearance.BorderSize = 0;
+            btnLoginNequi.FlatStyle = FlatStyle.Flat;
+            btnLoginNequi.ForeColor = Color.Gainsboro;
+            btnLoginNequi.Location = new Point(0, 40);
+            btnLoginNequi.Name = "btnLoginNequi";
+            btnLoginNequi.Padding = new Padding(35, 0, 0, 0);
+            btnLoginNequi.Size = new Size(250, 40);
+            btnLoginNequi.TabIndex = 2;
+            btnLoginNequi.Text = "Iniciar Sesión";
+            btnLoginNequi.TextAlign = ContentAlignment.MiddleLeft;
+            btnLoginNequi.UseVisualStyleBackColor = true;
+            btnLoginNequi.Click += btnRechargeNequi_Click;
             // 
             // btnRegisterNequi
             // 
@@ -208,7 +208,7 @@
             btnNequi.Padding = new Padding(10, 0, 0, 0);
             btnNequi.Size = new Size(250, 45);
             btnNequi.TabIndex = 4;
-            btnNequi.Text = "Nequi";
+            btnNequi.Text = "Gestionar Nequi";
             btnNequi.TextAlign = ContentAlignment.MiddleLeft;
             btnNequi.UseVisualStyleBackColor = true;
             btnNequi.Click += btnNequi_Click;
@@ -369,7 +369,7 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // Form1
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -379,7 +379,7 @@
             Controls.Add(panelSlideMenu);
             Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             MinimumSize = new Size(950, 600);
-            Name = "Form1";
+            Name = "FormMain";
             Text = "Form1";
             panelSlideMenu.ResumeLayout(false);
             panelAboutSubmenu.ResumeLayout(false);
@@ -405,7 +405,7 @@
         private Button btnRegisterDebitCard;
         private Button btnManageDebitCard;
         private Panel panelNequiSubmenu;
-        private Button btnRechargeNequi;
+        private Button btnLoginNequi;
         private Button btnRegisterNequi;
         private Button btnAbout;
         private Panel panelAboutSubmenu;

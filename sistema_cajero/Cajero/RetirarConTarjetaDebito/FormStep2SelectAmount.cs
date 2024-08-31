@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DAL;
 using Entities;
+using Entities.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,7 @@ namespace sistema_cajero
                 if (response.Success)
                 {
                     var updatedCard = debitCardService.GetDebitCardByNumber(card.CardNumber);
-                    var mapBills = debitCardService.CalculateBillsQuantity(50_000);
+                    var mapBills = CalculateBills.CalculateBillsQuantity(50_000);
                     mainForm.openChildForm(new FormStep3Details(updatedCard, mapBills, "50.000"));
                 }
             }
@@ -89,7 +90,7 @@ namespace sistema_cajero
                 if (response.Success)
                 {
                     var updatedCard = debitCardService.GetDebitCardByNumber(card.CardNumber);
-                    var mapBills = debitCardService.CalculateBillsQuantity(amount);
+                    var mapBills = CalculateBills.CalculateBillsQuantity(50_000);
                     mainForm.openChildForm(new FormStep3Details(updatedCard, mapBills, amount.ToString()));
                 }
             }
@@ -110,7 +111,7 @@ namespace sistema_cajero
                 if (response.Success)
                 {
                     var updatedCard = debitCardService.GetDebitCardByNumber(card.CardNumber);
-                    var mapBills = debitCardService.CalculateBillsQuantity(100_000);
+                    var mapBills = CalculateBills.CalculateBillsQuantity(100_000);
                     mainForm.openChildForm(new FormStep3Details(updatedCard, mapBills, "100.000"));
                 }
             }
@@ -131,7 +132,7 @@ namespace sistema_cajero
                 if (response.Success)
                 {
                     var updatedCard = debitCardService.GetDebitCardByNumber(card.CardNumber);
-                    var mapBills = debitCardService.CalculateBillsQuantity(200_000);
+                    var mapBills = CalculateBills.CalculateBillsQuantity(200_000);
                     mainForm.openChildForm(new FormStep3Details(updatedCard, mapBills, "200.000"));
                 }
             }
@@ -152,7 +153,7 @@ namespace sistema_cajero
                 if (response.Success)
                 {
                     var updatedCard = debitCardService.GetDebitCardByNumber(card.CardNumber);
-                    var mapBills = debitCardService.CalculateBillsQuantity(300_000);
+                    var mapBills = CalculateBills.CalculateBillsQuantity(300_000);
                     mainForm.openChildForm(new FormStep3Details(updatedCard, mapBills, "300.000"));
                 }
             }
@@ -173,7 +174,7 @@ namespace sistema_cajero
                 if (response.Success)
                 {
                     var updatedCard = debitCardService.GetDebitCardByNumber(card.CardNumber);
-                    var mapBills = debitCardService.CalculateBillsQuantity(400_000);
+                    var mapBills = CalculateBills.CalculateBillsQuantity(400_000);
                     mainForm.openChildForm(new FormStep3Details(updatedCard, mapBills, "400.000"));
                 }
             }
@@ -194,7 +195,7 @@ namespace sistema_cajero
                 if (response.Success)
                 {
                     var updatedCard = debitCardService.GetDebitCardByNumber(card.CardNumber);
-                    var mapBills = debitCardService.CalculateBillsQuantity(500_000);
+                    var mapBills = CalculateBills.CalculateBillsQuantity(500_000);
                     mainForm.openChildForm(new FormStep3Details(updatedCard, mapBills, "500.000"));
                 }
             }
@@ -215,7 +216,7 @@ namespace sistema_cajero
                 if (response.Success)
                 {
                     var updatedCard = debitCardService.GetDebitCardByNumber(card.CardNumber);
-                    var mapBills = debitCardService.CalculateBillsQuantity(600_000);
+                    var mapBills = CalculateBills.CalculateBillsQuantity(500_000);
                     mainForm.openChildForm(new FormStep3Details(updatedCard, mapBills, "600.000"));
                 }
             }

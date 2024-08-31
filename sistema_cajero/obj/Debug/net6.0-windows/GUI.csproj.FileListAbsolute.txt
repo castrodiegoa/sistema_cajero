@@ -36,7 +36,6 @@ C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.AssemblyInfoInputs.cache
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.AssemblyInfo.cs
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.csproj.CoreCompileInputs.cache
-C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.csproj.CopyComplete
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.dll
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\refint\GUI.dll
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.pdb
@@ -66,5 +65,12 @@ C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\sistema_cajero.FormStep2SelectAmount.resources
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\sistema_cajero.FormStep3Details.resources
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\sistema_cajero.FormMain.resources
-C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\sistema_cajero.FormRechargeCreditCard.resources
 C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\sistema_cajero.FormRegisterDebitCard.resources
+C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.Nequi.FormRegisterNequiAccount.resources
+C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\sistema_cajero.FormRechargeDebitCard.resources
+C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.sourcelink.json
+C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.csproj.Up2Date
+C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.GestionarNequi.IniciarSesion.FormStep1LoginNequi.resources
+C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.GestionarNequi.IniciarSesion.FormStep3RechargeNequiAccount.resources
+C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.GestionarNequi.IniciarSesion.FormStep2_2WithdrawMoneyNequiAccount.resources
+C:\Sistemasdeinformacion\sistema_cajero\sistema_cajero\obj\Debug\net6.0-windows\GUI.GestionarNequi.FormStep2DashboardNequi.resources

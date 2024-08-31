@@ -24,9 +24,11 @@ namespace BLL
         public Response AddDebitCard(DebitCard card)
         {
             // Validaciones
-            if (!ValidationHelper.IsCardNumberValid(card.CardNumber))
+            var cardExist = GetDebitCardByNumber(card.CardNumber);
+
+            if(cardExist != null)
             {
-                return new Response { Success = false, Message = "Número de tarjeta inválido. (16 dígitos númericos)" };
+                return new Response { Success = false, Message = "Número de tarjeta ya existe." };
             }
 
             if (!ValidationHelper.IsPasswordValid(card.Password))
@@ -36,7 +38,7 @@ namespace BLL
 
             if (!ValidationHelper.IsBalanceValid(card.AvailableBalance))
             {
-                return new Response { Success = false, Message = "Saldo inválido. (Mayor a 0)" };
+                return new Response { Success = false, Message = "Saldo inválido. (Mayor o igual a 0)" };
             }
 
             try
@@ -55,8 +57,6 @@ namespace BLL
         {
             return _debitCardRepository.GetById(id);
         }
-
-        
         
         public Response RechargeDebitCard(string cardNumber, Decimal rechargeAmount)
         {
@@ -92,12 +92,6 @@ namespace BLL
 
         public DebitCard GetDebitCardByNumber(string cardNumber)
         {
-            // Validaciones
-            if (!ValidationHelper.IsCardNumberValid(cardNumber))
-            {
-                return null;
-            }
-
             return _debitCardRepository.GetCardByNumber(cardNumber);
         }
 
@@ -120,45 +114,6 @@ namespace BLL
             }
 
             return new Response { Success = false, Message = "Contraseña incorrecta." };
-        }
-
-        // **** 
-
-        private static readonly int[] typesBills = { 10_000, 20_000, 50_000, 100_000 };
-
-        public Dictionary<int, int> CalculateBillsQuantity(int requestedAmount)
-        {
-            Dictionary<int, int> billsCount = InitializeMapBills();
-            int position = 0;
-
-            while (requestedAmount > 0)
-            {
-                int bill = typesBills[position];
-                int index = position;
-
-                while (index < typesBills.Length &&
-                       bill <= requestedAmount &&
-                       requestedAmount > 0)
-                {
-                    billsCount[bill] += 1;
-                    requestedAmount -= bill;
-                    bill = typesBills[++index % typesBills.Length];
-                }
-
-                position = ++position % typesBills.Length;
-            }
-
-            return billsCount;
-        }
-
-        private Dictionary<int, int> InitializeMapBills()
-        {
-            Dictionary<int, int> map = new Dictionary<int, int>();
-            foreach (int typeBill in typesBills)
-            {
-                map[typeBill] = 0;
-            }
-            return map;
         }
     }
 }

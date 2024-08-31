@@ -4,10 +4,22 @@
     <Compile Update="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GestionarNequi\IniciarSesion\FormStep1LoginNequi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GestionarNequi\IniciarSesion\FormStep2-2WithdrawMoneyNequiAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GestionarNequi\IniciarSesion\FormStep2DashboardNequi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GestionarNequi\IniciarSesion\FormStep2-1RechargeNequiAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GestionarTarjetaDebito\FormRegisterDebitCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GestionarTarjetaDebito\FormRechargeCreditCard.cs">
+    <Compile Update="GestionarTarjetaDebito\FormRechargeDebitCard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Cajero\RetirarConTarjetaDebito\FormStep1Login.cs">
@@ -17,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Cajero\RetirarConTarjetaDebito\FormStep3Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GestionarNequi\FormRegisterNequiAccount.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

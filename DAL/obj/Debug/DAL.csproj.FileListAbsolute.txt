@@ -4,7 +4,6 @@ C:\Sistemasdeinformacion\sistema_cajero\DAL\bin\Debug\Entities.dll
 C:\Sistemasdeinformacion\sistema_cajero\DAL\bin\Debug\Entities.pdb
 C:\Sistemasdeinformacion\sistema_cajero\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
 C:\Sistemasdeinformacion\sistema_cajero\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Sistemasdeinformacion\sistema_cajero\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Sistemasdeinformacion\sistema_cajero\DAL\obj\Debug\DAL.dll
 C:\Sistemasdeinformacion\sistema_cajero\DAL\obj\Debug\DAL.pdb
 C:\Sistemasdeinformacion\sistema_cajero\DAL\bin\Debug\DAL.dll.config
@@ -40,3 +39,4 @@ C:\Sistemasdeinformacion\sistema_cajero\DAL\bin\Debug\System.Memory.xml
 C:\Sistemasdeinformacion\sistema_cajero\DAL\bin\Debug\System.Numerics.Vectors.xml
 C:\Sistemasdeinformacion\sistema_cajero\DAL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Sistemasdeinformacion\sistema_cajero\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Sistemasdeinformacion\sistema_cajero\DAL\obj\Debug\DAL.csproj.Up2Date

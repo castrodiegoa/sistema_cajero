@@ -96,6 +96,7 @@
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="DebitCardRepository.cs" />
     <Compile Include="Interfaces\IDebitCardRepository.cs" />
+    <Compile Include="Interfaces\INequiAccountRepository.cs" />
     <Compile Include="NequiAccountRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

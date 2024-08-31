@@ -52,6 +52,13 @@ namespace sistema_cajero
                     return;
                 }
 
+                // Validar número de tarjeta
+                if (!ValidationHelper.IsCardNumberValid(cardNumber))
+                {
+                    MessageBox.Show("Por favor, ingrese un número de tarjeta válido. (11 dígitos)");
+                    return;
+                }
+
                 // Crear la instancia de la tarjeta de débito
                 DebitCard newCard = new DebitCard
                 {

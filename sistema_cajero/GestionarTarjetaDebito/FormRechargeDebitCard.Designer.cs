@@ -1,6 +1,6 @@
 ﻿namespace sistema_cajero
 {
-    partial class FormRechargeCreditCard
+    partial class FormRechargeDebitCard
     {
         /// <summary>
         /// Required designer variable.

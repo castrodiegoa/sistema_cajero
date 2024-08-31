@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace sistema_cajero
 {
-    public partial class FormRechargeCreditCard : Form
+    public partial class FormRechargeDebitCard : Form
     {
         private readonly DebitCardService debitCardService;
 
-        public FormRechargeCreditCard()
+        public FormRechargeDebitCard()
         {
             InitializeComponent();
             debitCardService = new DebitCardService(new DebitCardRepository());

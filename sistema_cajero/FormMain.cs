@@ -1,3 +1,6 @@
+using GUI.GestionarNequi.IniciarSesion;
+using GUI.Nequi;
+
 namespace sistema_cajero
 {
     public partial class FormMain : Form
@@ -91,12 +94,12 @@ namespace sistema_cajero
         private void btnRechargeCreditCard_Click(object sender, EventArgs e)
         {
             // code...
-            openChildForm(new FormRechargeCreditCard());
+            openChildForm(new FormRechargeDebitCard());
             hideSubeMenu();
         }
 
         /*
-         * Events button "Nequi"
+         * Events button "Gestionar Nequi"
          */
         private void btnNequi_Click(object sender, EventArgs e)
         {
@@ -106,12 +109,14 @@ namespace sistema_cajero
         private void btnRegisterNequi_Click(object sender, EventArgs e)
         {
             // code...
+            openChildForm(new FormRegisterNequiAccount());
             hideSubeMenu();
         }
 
         private void btnRechargeNequi_Click(object sender, EventArgs e)
         {
             // code...
+            openChildForm(new FormStep1LoginNequi(this));
             hideSubeMenu();
         }
 
