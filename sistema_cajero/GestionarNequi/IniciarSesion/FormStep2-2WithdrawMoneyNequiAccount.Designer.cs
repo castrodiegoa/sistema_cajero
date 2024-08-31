@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // label1
@@ -42,12 +43,23 @@
             label1.TabIndex = 51;
             label1.Text = "Withdraw Nequi Form";
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(166, 81);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(33, 30);
+            btnBack.TabIndex = 52;
+            btnBack.Text = "<";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // FormStep2_2WithdrawMoneyNequiAccount
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 30, 45);
             ClientSize = new Size(684, 461);
+            Controls.Add(btnBack);
             Controls.Add(label1);
             Name = "FormStep2_2WithdrawMoneyNequiAccount";
             Text = "FormStep2_2WithdrawMoneyNequiAccount";
@@ -58,5 +70,6 @@
         #endregion
 
         private Label label1;
+        private Button btnBack;
     }
 }

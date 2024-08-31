@@ -81,6 +81,7 @@
             label4.Size = new Size(101, 15);
             label4.TabIndex = 30;
             label4.Text = "Monto a recargar:";
+            //label4.Click += this.label4_Click;
             // 
             // label3
             // 
@@ -112,6 +113,7 @@
             txtAmountToRecharge.Name = "txtAmountToRecharge";
             txtAmountToRecharge.Size = new Size(258, 23);
             txtAmountToRecharge.TabIndex = 26;
+            txtAmountToRecharge.TextChanged += txtAmountToRecharge_TextChanged;
             // 
             // txtPasswordCard
             // 
@@ -131,7 +133,7 @@
             txtNumberCard.Size = new Size(258, 23);
             txtNumberCard.TabIndex = 24;
             // 
-            // FormRechargeCreditCard
+            // FormRechargeDebitCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -146,7 +148,7 @@
             Controls.Add(txtAmountToRecharge);
             Controls.Add(txtPasswordCard);
             Controls.Add(txtNumberCard);
-            Name = "FormRechargeCreditCard";
+            Name = "FormRechargeDebitCard";
             Text = "Form3";
             ResumeLayout(false);
             PerformLayout();

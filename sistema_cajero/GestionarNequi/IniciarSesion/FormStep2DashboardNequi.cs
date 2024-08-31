@@ -67,7 +67,7 @@ namespace GUI.GestionarNequi
             // Proceso de generar codigo o clave dinamica...
             // ###
 
-            mainForm.openChildForm(new FormStep2_2WithdrawMoneyNequiAccount(mainForm));
+            mainForm.openChildForm(new FormStep2_2WithdrawMoneyNequiAccount(mainForm, nequiAccount));
         }
 
         private void btnRecharge_Click(object sender, EventArgs e)

@@ -48,7 +48,7 @@ namespace sistema_cajero
                 {
                     MessageBox.Show("Por favor, ingrese un monto válido.");
                     return;
-                }             
+                }
 
                 // Loguear la tarjeta en la base de datos
                 var response = debitCardService.AuthenticateDebitCard(cardNumber, password);
@@ -69,6 +69,11 @@ namespace sistema_cajero
             {
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
             }
+        }
+
+        private void txtAmountToRecharge_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
