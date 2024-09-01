@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace sistema_cajero
 {
-    public partial class FormStep1Login : Form
+    public partial class FormStep1LoginDebitCardATM : Form
     {
         private FormMain mainForm;
         private readonly DebitCardService debitCardService;
 
-        public FormStep1Login(FormMain form)
+        public FormStep1LoginDebitCardATM(FormMain form)
         {
             InitializeComponent();
             mainForm = form;
@@ -61,6 +61,9 @@ namespace sistema_cajero
                     var card = debitCardService.GetDebitCardByNumber(cardNumber);
                     mainForm.openChildForm(new FormStep2SelectAmount(mainForm, card));
                 }
+
+                // si la cuneta existe mirar la clave dinamica
+                // Si es igual loguear
             }
             catch (Exception ex)
             {

@@ -50,7 +50,7 @@ namespace BLL
 
         }
 
-        public NequiAccount GetNequiAccount(int id)
+        public NequiAccount GetNequiAccountById(int id)
         {
             return _nequiAccountRepository.GetById(id);
         }
@@ -113,6 +113,24 @@ namespace BLL
             }
 
             return new Response { Success = false, Message = "Contraseña incorrecta." };
+        }
+
+        public Response AuntenticatWithDynamicKey(string phoneNumber, string password, string dynamicKey)
+        {
+            var response = AuthenticateNequiAccount(phoneNumber, password);
+            var nequiAccount = GetAccountByPhoneNumber(phoneNumber);
+
+            if (!response.Success)
+            {
+                return response;
+            }
+
+            if (dynamicKey != nequiAccount.DynamicKey)
+            {
+                return new Response { Success = false, Message = "Clave dinámica incorrecta." };
+            }
+
+            return new Response { Success = true, Message = "Clave dinámica correcta." };
         }
 
         public Response SaveDinamicKeyToNequiAccount(NequiAccount account)

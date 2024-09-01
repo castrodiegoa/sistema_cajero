@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Cajero\RetirarConTarjetaONequi\FormStep0SelectWithdrawalType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Cajero\RetirarConTarjetaONequi\FormStep1LoginNequiAccountATM.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -22,13 +28,13 @@
     <Compile Update="GestionarTarjetaDebito\FormRechargeDebitCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Cajero\RetirarConTarjetaDebito\FormStep1Login.cs">
+    <Compile Update="Cajero\RetirarConTarjetaONequi\FormStep1LoginDebitCardATM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Cajero\RetirarConTarjetaDebito\FormStep2SelectAmount.cs">
+    <Compile Update="Cajero\RetirarConTarjetaONequi\FormStep2SelectAmount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Cajero\RetirarConTarjetaDebito\FormStep3Details.cs">
+    <Compile Update="Cajero\RetirarConTarjetaONequi\FormStep3Details.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GestionarNequi\FormRegisterNequiAccount.cs">

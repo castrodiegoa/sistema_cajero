@@ -16,7 +16,8 @@ namespace sistema_cajero
 {
     public partial class FormStep3Details : Form
     {
-        private DebitCard card;
+        private DebitCard? card;
+        private NequiAccount? account;
         Dictionary<int, int> mapBills;
 
         private string withdrawAmount;
@@ -31,11 +32,30 @@ namespace sistema_cajero
 
         }
 
+        public FormStep3Details(NequiAccount account, Dictionary<int, int> mapBills, string withdrawAmount)
+        {
+            InitializeComponent();
+            this.account = account;
+            this.mapBills = mapBills;
+            InitializeFormLabels();
+            this.withdrawAmount = withdrawAmount;
+        }
+
         private void InitializeFormLabels()
         {
             label12.Text = withdrawAmount;
-            label13.Text = card.AvailableBalance.ToString();
-            label14.Text = card.CardHolderName.ToString();
+            
+            if (card != null)
+            {
+                label13.Text = card.AvailableBalance.ToString();
+                label14.Text = card.CardHolderName.ToString();
+            }
+            else if (account != null)
+            {
+                label13.Text = account.AvailableBalance.ToString();
+                label14.Text = account.AccountHolderName.ToString();
+            }
+
             label15.Text = DateTime.Now.ToString("dd/MM/yyyy");
 
             label16.Text = mapBills[10_000].ToString();

@@ -1,6 +1,6 @@
-﻿namespace sistema_cajero
+﻿namespace GUI.Cajero.RetirarConTarjetaONequi
 {
-    partial class FormStep1Login
+    partial class FormStep1LoginNequiAccountATM
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
             btnExit = new Button();
             btnGetInto = new Button();
             label5 = new Label();
             label3 = new Label();
             label2 = new Label();
-            txtPasswordCard = new TextBox();
-            txtNumberCard = new TextBox();
-            label1 = new Label();
+            txtPassword = new TextBox();
+            txtPhoneNumber = new TextBox();
+            txtDynamicKey = new TextBox();
+            label4 = new Label();
             SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.ForeColor = Color.Gainsboro;
+            label1.Location = new Point(321, 51);
+            label1.Name = "label1";
+            label1.Size = new Size(41, 15);
+            label1.TabIndex = 49;
+            label1.Text = "Paso 1";
             // 
             // btnExit
             // 
             btnExit.Location = new Point(-1, -1);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(33, 30);
-            btnExit.TabIndex = 40;
+            btnExit.TabIndex = 48;
             btnExit.Text = "X";
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
@@ -51,10 +64,10 @@
             // btnGetInto
             // 
             btnGetInto.Anchor = AnchorStyles.Bottom;
-            btnGetInto.Location = new Point(299, 377);
+            btnGetInto.Location = new Point(321, 356);
             btnGetInto.Name = "btnGetInto";
             btnGetInto.Size = new Size(75, 23);
-            btnGetInto.TabIndex = 39;
+            btnGetInto.TabIndex = 47;
             btnGetInto.Text = "Ingresar";
             btnGetInto.UseVisualStyleBackColor = true;
             btnGetInto.Click += btnGetInto_Click;
@@ -66,9 +79,9 @@
             label5.ForeColor = Color.Gainsboro;
             label5.Location = new Point(273, 27);
             label5.Name = "label5";
-            label5.Size = new Size(139, 15);
-            label5.TabIndex = 38;
-            label5.Text = "Retirar con Tarjeta Débito";
+            label5.Size = new Size(156, 15);
+            label5.TabIndex = 46;
+            label5.Text = "Retirar con Cuenta de Nequi";
             // 
             // label3
             // 
@@ -77,9 +90,9 @@
             label3.ForeColor = Color.Gainsboro;
             label3.Location = new Point(86, 245);
             label3.Name = "label3";
-            label3.Size = new Size(134, 15);
-            label3.TabIndex = 37;
-            label3.Text = "Contraseña de la tarjeta:";
+            label3.Size = new Size(70, 15);
+            label3.TabIndex = 45;
+            label3.Text = "Contraseña:";
             // 
             // label2
             // 
@@ -88,68 +101,81 @@
             label2.ForeColor = Color.Gainsboro;
             label2.Location = new Point(86, 203);
             label2.Name = "label2";
-            label2.Size = new Size(106, 15);
-            label2.TabIndex = 36;
-            label2.Text = "Número de tarjeta:";
+            label2.Size = new Size(117, 15);
+            label2.TabIndex = 44;
+            label2.Text = "Número de teléfono:";
             // 
-            // txtPasswordCard
+            // txtPassword
             // 
-            txtPasswordCard.Anchor = AnchorStyles.None;
-            txtPasswordCard.BorderStyle = BorderStyle.FixedSingle;
-            txtPasswordCard.Location = new Point(254, 237);
-            txtPasswordCard.Name = "txtPasswordCard";
-            txtPasswordCard.Size = new Size(258, 23);
-            txtPasswordCard.TabIndex = 35;
+            txtPassword.Anchor = AnchorStyles.None;
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.Location = new Point(254, 237);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(258, 23);
+            txtPassword.TabIndex = 43;
             // 
-            // txtNumberCard
+            // txtPhoneNumber
             // 
-            txtNumberCard.Anchor = AnchorStyles.None;
-            txtNumberCard.BorderStyle = BorderStyle.FixedSingle;
-            txtNumberCard.Location = new Point(254, 195);
-            txtNumberCard.Name = "txtNumberCard";
-            txtNumberCard.Size = new Size(258, 23);
-            txtNumberCard.TabIndex = 34;
+            txtPhoneNumber.Anchor = AnchorStyles.None;
+            txtPhoneNumber.BorderStyle = BorderStyle.FixedSingle;
+            txtPhoneNumber.Location = new Point(254, 195);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(258, 23);
+            txtPhoneNumber.TabIndex = 42;
             // 
-            // label1
+            // txtDynamicKey
             // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.ForeColor = Color.Gainsboro;
-            label1.Location = new Point(321, 51);
-            label1.Name = "label1";
-            label1.Size = new Size(41, 15);
-            label1.TabIndex = 41;
-            label1.Text = "Paso 1";
+            txtDynamicKey.Anchor = AnchorStyles.None;
+            txtDynamicKey.BorderStyle = BorderStyle.FixedSingle;
+            txtDynamicKey.Location = new Point(254, 276);
+            txtDynamicKey.Name = "txtDynamicKey";
+            txtDynamicKey.Size = new Size(258, 23);
+            txtDynamicKey.TabIndex = 50;
             // 
-            // Form4
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.ForeColor = Color.Gainsboro;
+            label4.Location = new Point(86, 284);
+            label4.Name = "label4";
+            label4.Size = new Size(91, 15);
+            label4.TabIndex = 51;
+            label4.Text = "Clave dinámica:";
+            // 
+            // FormStep1LoginNequiAccountATM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 30, 45);
             ClientSize = new Size(684, 461);
+            Controls.Add(label4);
+            Controls.Add(txtDynamicKey);
             Controls.Add(label1);
             Controls.Add(btnExit);
             Controls.Add(btnGetInto);
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(txtPasswordCard);
-            Controls.Add(txtNumberCard);
-            Name = "Form4";
-            Text = "Form4";
+            Controls.Add(txtPassword);
+            Controls.Add(txtPhoneNumber);
+            Name = "FormStep1LoginNequiAccountATM";
+            Text = "FormStep1LoginNequiAccountATM";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private Label label1;
         private Button btnExit;
         private Button btnGetInto;
         private Label label5;
         private Label label3;
         private Label label2;
-        private TextBox txtPasswordCard;
-        private TextBox txtNumberCard;
-        private Label label1;
+        private TextBox txtPassword;
+        private TextBox txtPhoneNumber;
+        private TextBox txtDynamicKey;
+        private Label label4;
     }
 }

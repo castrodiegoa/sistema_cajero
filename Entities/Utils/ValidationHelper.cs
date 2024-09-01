@@ -18,6 +18,11 @@ namespace Entities
             return phoneNumber.Length == 10 && phoneNumber.All(char.IsDigit);
         }
 
+        public static bool IsDynamicKeyValid(string dynamicKey)
+        {
+            return dynamicKey.Length == 6 && dynamicKey.All(char.IsDigit);
+        }
+
         public static bool IsPasswordValid(string password)
         {
             return password.Length >= 8;

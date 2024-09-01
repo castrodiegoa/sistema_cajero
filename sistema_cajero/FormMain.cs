@@ -1,3 +1,4 @@
+using GUI.Cajero.RetirarConTarjetaONequi;
 using GUI.GestionarNequi.IniciarSesion;
 using GUI.Nequi;
 
@@ -66,13 +67,13 @@ namespace sistema_cajero
         private void btnWithdrawWithCreditCard_Click(object sender, EventArgs e)
         {
             // code...
-            openChildForm(new FormStep1Login(this));
+            openChildForm(new FormStep0SelectWithdrawalType(this));
             hideSubeMenu();
         }
 
         private void btnWithdrawWithNequi_Click(object sender, EventArgs e)
         {
-            // code...
+            // code... ELIMINAR
             hideSubeMenu();
         }
 
