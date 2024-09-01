@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             btnBack = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -53,12 +54,24 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top;
+            label2.AutoSize = true;
+            label2.ForeColor = Color.Gainsboro;
+            label2.Location = new Point(281, 252);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 53;
+            label2.Text = "label2";
+            // 
             // FormStep2_2WithdrawMoneyNequiAccount
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(32, 30, 45);
             ClientSize = new Size(684, 461);
+            Controls.Add(label2);
             Controls.Add(btnBack);
             Controls.Add(label1);
             Name = "FormStep2_2WithdrawMoneyNequiAccount";
@@ -71,5 +84,6 @@
 
         private Label label1;
         private Button btnBack;
+        private Label label2;
     }
 }

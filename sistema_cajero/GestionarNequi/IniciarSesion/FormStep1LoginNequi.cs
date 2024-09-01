@@ -60,7 +60,7 @@ namespace GUI.GestionarNequi.IniciarSesion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
+                MessageBox.Show("Ocurrió un error inesperado: " + ex);
             }
         }
     }

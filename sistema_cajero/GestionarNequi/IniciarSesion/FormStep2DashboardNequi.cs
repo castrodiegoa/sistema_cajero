@@ -1,4 +1,6 @@
-﻿using Entities;
+﻿using BLL;
+using DAL;
+using Entities;
 using GUI.GestionarNequi.IniciarSesion;
 using GUI.Nequi;
 using sistema_cajero;
@@ -21,12 +23,14 @@ namespace GUI.GestionarNequi
     {
         private FormMain mainForm;
         private NequiAccount nequiAccount;
+        private readonly NequiAccountService nequiAccountService;
 
         public FormStep2DashboardNequi(FormMain form, NequiAccount account)
         {
             InitializeComponent();
             this.mainForm = form;
             this.nequiAccount = account;
+            nequiAccountService = new NequiAccountService(new NequiAccountRepository());
             customizeDesing();
         }
 
@@ -65,9 +69,16 @@ namespace GUI.GestionarNequi
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
             // Proceso de generar codigo o clave dinamica...
-            // ###
+            var response = nequiAccountService.SaveDinamicKeyToNequiAccount(nequiAccount);
 
-            mainForm.openChildForm(new FormStep2_2WithdrawMoneyNequiAccount(mainForm, nequiAccount));
+            if (!response.Success)
+            {
+                MessageBox.Show(response.Message);
+                return;
+            }
+
+            var updatedAccount = nequiAccountService.GetAccountByPhoneNumber(nequiAccount.AccountNumber);
+            mainForm.openChildForm(new FormStep2_2WithdrawMoneyNequiAccount(mainForm, updatedAccount));
         }
 
         private void btnRecharge_Click(object sender, EventArgs e)

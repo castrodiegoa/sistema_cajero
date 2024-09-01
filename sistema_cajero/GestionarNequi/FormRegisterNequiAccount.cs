@@ -58,14 +58,7 @@ namespace GUI.Nequi
                     return;
                 }
 
-                // Validar contraseña de nequi
-                if (!ValidationHelper.IsPasswordNequiValid(phoneNumber))
-                {
-                    MessageBox.Show("Por favor, ingrese una contraseña válida. (4 dígitos)");
-                    return;
-                }
-
-                // Crear la instancia de la tarjeta de débito
+                // Crear la instancia
                 NequiAccount newAccount = new NequiAccount
                 {
                     AccountHolderName = cardHolderName,
