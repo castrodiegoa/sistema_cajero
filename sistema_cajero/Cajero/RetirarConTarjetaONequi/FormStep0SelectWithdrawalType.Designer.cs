@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             radioBtnDebitCard = new RadioButton();
             radioBtnNequiAccount = new RadioButton();
             btnContinue = new Button();
             label1 = new Label();
             label2 = new Label();
             btnExit = new Button();
+            InactivityTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // radioBtnDebitCard
@@ -100,6 +102,11 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // InactivityTimer
+            // 
+            InactivityTimer.Interval = 30000;
+            InactivityTimer.Tick += InactivityTimer_Tick_1;
+            // 
             // FormStep0SelectWithdrawalType
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -114,6 +121,7 @@
             Controls.Add(radioBtnDebitCard);
             Name = "FormStep0SelectWithdrawalType";
             Text = "FormStep0SelectWithdrawalType";
+            FormClosing += FormStep0SelectWithdrawalType_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,5 +134,6 @@
         private Label label1;
         private Label label2;
         private Button btnExit;
+        private System.Windows.Forms.Timer InactivityTimer;
     }
 }

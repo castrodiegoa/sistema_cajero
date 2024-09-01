@@ -19,6 +19,7 @@ namespace GUI.Cajero.RetirarConTarjetaONequi
         {
             InitializeComponent();
             mainForm = form;
+            InactivityTimer.Start();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -40,6 +41,21 @@ namespace GUI.Cajero.RetirarConTarjetaONequi
             {
                 MessageBox.Show("Seleccione una opción antes de continuar.");
             }
+        }
+
+        private void InactivityTimer_Tick_1(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                MessageBox.Show("Ha tardado demasiado tiempo en completar la transacción. Por favor, intente nuevamente.",
+                                "Tiempo Excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+            }
+        }
+
+        private void FormStep0SelectWithdrawalType_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            InactivityTimer.Stop();
         }
     }
 }

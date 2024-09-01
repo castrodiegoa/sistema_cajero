@@ -21,20 +21,23 @@ namespace GUI.GestionarNequi.IniciarSesion
         private FormMain mainForm;
         private NequiAccount nequiAccount;
         private readonly NequiAccountService nequiAccountService;
+        private string futureDate;
 
-        public FormStep2_2WithdrawMoneyNequiAccount(FormMain form, NequiAccount nequiAccount)
+        public FormStep2_2WithdrawMoneyNequiAccount(FormMain form, NequiAccount nequiAccount, string futureDate)
         {
             InitializeComponent();
             mainForm = form;
             this.nequiAccount = nequiAccount;
             nequiAccountService = new NequiAccountService(new NequiAccountRepository());
+            this.futureDate = futureDate;
             InitializeForm();
         }
 
         private async void InitializeForm()
         {
             label2.Text = nequiAccount.DynamicKey;
-            await Task.Delay(30000);
+            label5.Text = futureDate;
+            await Task.Delay(60000);
 
             var deleteDynamicKey = nequiAccountService.DeleteDinamicKeyToNequiAccount(nequiAccount);
             

@@ -15,6 +15,7 @@ namespace Entities
         public decimal AvailableBalance { get; set; }
         public DateTime CreationDate { get; set; }
         public string DynamicKey { get; set; } = string.Empty;  // Puede ser nulo
+        public bool IsBlocked { get; set; } = false;
     }
 
 }

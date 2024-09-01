@@ -24,6 +24,7 @@ namespace GUI.Cajero.RetirarConTarjetaONequi
             InitializeComponent();
             mainForm = form;
             this.nequiAccountService = new NequiAccountService(new NequiAccountRepository());
+            InactivityTimer.Start();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -61,14 +62,12 @@ namespace GUI.Cajero.RetirarConTarjetaONequi
                     return;
                 }
 
-                // Loguear la nequi en la base de datos y validar clave dinamica
                 var response = nequiAccountService.AuntenticatWithDynamicKey(phoneNumber, password, dynamicKey);
 
                 MessageBox.Show(response.Message);
                 if (response.Success)
                 {
                     var account = nequiAccountService.GetAccountByPhoneNumber(phoneNumber);
-                    // Validar que el sig form permita nequi y tarjeta
                     mainForm.openChildForm(new FormStep2SelectAmount(mainForm, account));
                 }
             }
@@ -76,6 +75,22 @@ namespace GUI.Cajero.RetirarConTarjetaONequi
             {
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
             }
+        }
+
+        private void InactivityTimer_Tick(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                MessageBox.Show("Ha tardado demasiado tiempo en completar la transacción. Por favor, intente nuevamente.",
+                                "Tiempo Excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+            }
+            
+        }
+
+        private void FormStep1LoginNequiAccountATM_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            InactivityTimer.Stop();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnExit = new Button();
             btnGetInto = new Button();
             label5 = new Label();
@@ -36,6 +37,7 @@
             txtPasswordCard = new TextBox();
             txtNumberCard = new TextBox();
             label1 = new Label();
+            InactivityTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // btnExit
@@ -121,7 +123,12 @@
             label1.TabIndex = 41;
             label1.Text = "Paso 1";
             // 
-            // Form4
+            // InactivityTimer
+            // 
+            InactivityTimer.Interval = 30000;
+            InactivityTimer.Tick += InactivityTimer_Tick;
+            // 
+            // FormStep1LoginDebitCardATM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -135,8 +142,9 @@
             Controls.Add(label2);
             Controls.Add(txtPasswordCard);
             Controls.Add(txtNumberCard);
-            Name = "Form4";
+            Name = "FormStep1LoginDebitCardATM";
             Text = "Form4";
+            FormClosing += FormStep1LoginDebitCardATM_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -151,5 +159,6 @@
         private TextBox txtPasswordCard;
         private TextBox txtNumberCard;
         private Label label1;
+        private System.Windows.Forms.Timer InactivityTimer;
     }
 }

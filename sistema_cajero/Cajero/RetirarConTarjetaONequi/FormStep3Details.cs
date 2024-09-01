@@ -27,9 +27,10 @@ namespace sistema_cajero
             InitializeComponent();
             this.card = card;
             this.mapBills = mapBills;
-            InitializeFormLabels();
+            
             this.withdrawAmount = withdrawAmount;
-
+            InactivityTimer.Start();
+            InitializeFormLabels();
         }
 
         public FormStep3Details(NequiAccount account, Dictionary<int, int> mapBills, string withdrawAmount)
@@ -37,14 +38,15 @@ namespace sistema_cajero
             InitializeComponent();
             this.account = account;
             this.mapBills = mapBills;
-            InitializeFormLabels();
             this.withdrawAmount = withdrawAmount;
+            InactivityTimer.Start();
+            InitializeFormLabels();
         }
 
         private void InitializeFormLabels()
         {
             label12.Text = withdrawAmount;
-            
+
             if (card != null)
             {
                 label13.Text = card.AvailableBalance.ToString();
@@ -56,7 +58,7 @@ namespace sistema_cajero
                 label14.Text = account.AccountHolderName.ToString();
             }
 
-            label15.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            label15.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
 
             label16.Text = mapBills[10_000].ToString();
             label17.Text = mapBills[20_000].ToString();
@@ -77,6 +79,21 @@ namespace sistema_cajero
         private void label13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormStep3Details_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            InactivityTimer.Stop();
+        }
+
+        private void InactivityTimer_Tick(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                MessageBox.Show("Transacción Finalizada.",
+                                "Tiempo Excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+            }
         }
     }
 }

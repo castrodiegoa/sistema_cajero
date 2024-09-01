@@ -14,6 +14,7 @@ namespace Entities
         public string Password { get; set; }
         public decimal AvailableBalance { get; set; }
         public DateTime CreationDate { get; set; }
+        public bool IsBlocked { get; set; } = false;
     }
 
 }

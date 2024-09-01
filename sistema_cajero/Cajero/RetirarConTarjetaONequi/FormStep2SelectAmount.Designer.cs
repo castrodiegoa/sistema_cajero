@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -46,6 +47,7 @@
             label7 = new Label();
             label6 = new Label();
             label8 = new Label();
+            InactivityTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -240,6 +242,11 @@
             label8.TabIndex = 38;
             label8.Text = "label8";
             // 
+            // InactivityTimer
+            // 
+            InactivityTimer.Interval = 30000;
+            InactivityTimer.Tick += InactivityTimer_Tick;
+            // 
             // FormStep2SelectAmount
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -266,6 +273,7 @@
             Controls.Add(label1);
             Name = "FormStep2SelectAmount";
             Text = "Form5";
+            FormClosing += FormStep2SelectAmount_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -290,5 +298,6 @@
         private Label label7;
         private Label label6;
         private Label label8;
+        private System.Windows.Forms.Timer InactivityTimer;
     }
 }

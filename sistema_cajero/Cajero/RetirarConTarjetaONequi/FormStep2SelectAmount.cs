@@ -29,6 +29,7 @@ namespace sistema_cajero
             this.card = card;
             InitializeFormLabels();
             debitCardService = new DebitCardService(new DebitCardRepository());
+            InactivityTimer.Start();
         }
 
         public FormStep2SelectAmount(FormMain form, NequiAccount account)
@@ -38,6 +39,7 @@ namespace sistema_cajero
             this.account = account;
             InitializeFormLabels();
             nequiAccountService = new NequiAccountService(new NequiAccountRepository());
+            InactivityTimer.Start();
         }
 
         private void InitializeFormLabels()
@@ -160,6 +162,21 @@ namespace sistema_cajero
         private void btn600_000_Click(object sender, EventArgs e)
         {
             HandleWithdraw(600_000);
+        }
+
+        private void FormStep2SelectAmount_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            InactivityTimer.Stop();
+        }
+
+        private void InactivityTimer_Tick(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                MessageBox.Show("Ha tardado demasiado tiempo en completar la transacción. Por favor, intente nuevamente.",
+                                "Tiempo Excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+            }
         }
     }
 }

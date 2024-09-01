@@ -77,8 +77,12 @@ namespace GUI.GestionarNequi
                 return;
             }
 
+            DateTime now = DateTime.Now;
+            DateTime futureDate = now.AddSeconds(30);
+            string futureDateString = futureDate.ToString("dd-MM-yyyy HH:mm:ss");
+
             var updatedAccount = nequiAccountService.GetAccountByPhoneNumber(nequiAccount.AccountNumber);
-            mainForm.openChildForm(new FormStep2_2WithdrawMoneyNequiAccount(mainForm, updatedAccount));
+            mainForm.openChildForm(new FormStep2_2WithdrawMoneyNequiAccount(mainForm, updatedAccount, futureDateString));
         }
 
         private void btnRecharge_Click(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace sistema_cajero
             InitializeComponent();
             mainForm = form;
             debitCardService = new DebitCardService(new DebitCardRepository());
+            InactivityTimer.Start();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace sistema_cajero
                 var response = debitCardService.AuthenticateDebitCard(cardNumber, password);
 
                 MessageBox.Show(response.Message);
-                if (response.Success) 
+                if (response.Success)
                 {
                     var card = debitCardService.GetDebitCardByNumber(cardNumber);
                     mainForm.openChildForm(new FormStep2SelectAmount(mainForm, card));
@@ -70,9 +71,22 @@ namespace sistema_cajero
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
             }
 
-            
+
         }
 
+        private void FormStep1LoginDebitCardATM_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            InactivityTimer.Stop();
+        }
 
+        private void InactivityTimer_Tick(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                MessageBox.Show("Ha tardado demasiado tiempo en completar la transacción. Por favor, intente nuevamente.",
+                                "Tiempo Excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+            }
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -48,6 +49,7 @@
             label17 = new Label();
             label18 = new Label();
             label19 = new Label();
+            InactivityTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -269,6 +271,11 @@
             label19.TabIndex = 19;
             label19.Text = "label19";
             // 
+            // InactivityTimer
+            // 
+            InactivityTimer.Interval = 30000;
+            InactivityTimer.Tick += InactivityTimer_Tick;
+            // 
             // FormStep3Details
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -297,6 +304,7 @@
             Controls.Add(label1);
             Name = "FormStep3Details";
             Text = "Form6";
+            FormClosing += FormStep3Details_FormClosing;
             Load += Form6_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -324,5 +332,6 @@
         private Label label17;
         private Label label18;
         private Label label19;
+        private System.Windows.Forms.Timer InactivityTimer;
     }
 }

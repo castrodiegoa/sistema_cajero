@@ -25,13 +25,16 @@ namespace DAL
                 using (var connection = _databaseConnection.GetConnection())
                 {
                     connection.Open();
-                    var command = new MySqlCommand("INSERT INTO NequiAccounts (account_holder_name, account_number, account_password, available_balance, dynamic_key) VALUES (@holderName, @number, @password, @balance, @dynamicKey)", connection);
+                    var command = new MySqlCommand(
+                        "INSERT INTO NequiAccounts (account_holder_name, account_number, account_password, available_balance, dynamic_key, isBlocked) " +
+                        "VALUES (@holderName, @number, @password, @balance, @dynamicKey, @isBlocked)", connection);
 
                     command.Parameters.AddWithValue("@holderName", account.AccountHolderName);
                     command.Parameters.AddWithValue("@number", account.AccountNumber);
                     command.Parameters.AddWithValue("@password", account.Password);
                     command.Parameters.AddWithValue("@balance", account.AvailableBalance);
                     command.Parameters.AddWithValue("@dynamicKey", account.DynamicKey);
+                    command.Parameters.AddWithValue("@isBlocked", account.IsBlocked); // Añadir el atributo IsBlocked
 
                     command.ExecuteNonQuery();
                 }
@@ -64,6 +67,7 @@ namespace DAL
                                 Password = reader.GetString("account_password"),
                                 AvailableBalance = reader.GetDecimal("available_balance"),
                                 DynamicKey = reader.IsDBNull(reader.GetOrdinal("dynamic_key")) ? null : reader.GetString("dynamic_key"),
+                                IsBlocked = reader.GetBoolean("isBlocked"), // Leer el estado de bloqueo
                                 CreationDate = reader.GetDateTime("created_at")
                             };
                         }
@@ -84,13 +88,16 @@ namespace DAL
                 using (var connection = _databaseConnection.GetConnection())
                 {
                     connection.Open();
-                    var command = new MySqlCommand("UPDATE NequiAccounts SET account_holder_name = @holderName, account_number = @number, account_password = @password, available_balance = @balance, dynamic_key = @dynamicKey WHERE id = @id", connection);
+                    var command = new MySqlCommand(
+                        "UPDATE NequiAccounts SET account_holder_name = @holderName, account_number = @number, account_password = @password, " +
+                        "available_balance = @balance, dynamic_key = @dynamicKey, isBlocked = @isBlocked WHERE id = @id", connection);
 
                     command.Parameters.AddWithValue("@holderName", account.AccountHolderName);
                     command.Parameters.AddWithValue("@number", account.AccountNumber);
                     command.Parameters.AddWithValue("@password", account.Password);
                     command.Parameters.AddWithValue("@balance", account.AvailableBalance);
                     command.Parameters.AddWithValue("@dynamicKey", account.DynamicKey);
+                    command.Parameters.AddWithValue("@isBlocked", account.IsBlocked); // Actualizar el estado de bloqueo
                     command.Parameters.AddWithValue("@id", account.Id);
 
                     command.ExecuteNonQuery();
@@ -143,6 +150,7 @@ namespace DAL
                                 Password = reader.GetString("account_password"),
                                 AvailableBalance = reader.GetDecimal("available_balance"),
                                 DynamicKey = reader.GetString("dynamic_key"),
+                                IsBlocked = reader.GetBoolean("isBlocked"), // Leer el estado de bloqueo
                                 CreationDate = reader.GetDateTime("created_at")
                             };
                         }
@@ -156,4 +164,5 @@ namespace DAL
             }
         }
     }
+
 }

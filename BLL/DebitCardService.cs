@@ -15,6 +15,7 @@ namespace BLL
     public class DebitCardService
     {
         private readonly IDebitCardRepository _debitCardRepository;
+        private int failedAttempts = 0;
 
         public DebitCardService(IDebitCardRepository debitCardRepository)
         {
@@ -108,12 +109,29 @@ namespace BLL
                 return new Response { Success = false, Message = "Número de tarjeta no registrado." };
             }
 
-            if (card.Password == password)
+            if (card.IsBlocked)
             {
-                return new Response { Success = true, Message = "Autenticación satisfactoria." };
+                return new Response { Success = false, Message = "La tarjeta está bloqueada." };
             }
 
-            return new Response { Success = false, Message = "Contraseña incorrecta." };
+            if (card.Password == password)
+            {
+                failedAttempts = 0;
+                return new Response { Success = true, Message = "Autenticación satisfactoria." };
+            }
+            else
+            {
+                failedAttempts++;
+            }
+
+            if (failedAttempts >= 3)
+            {
+                card.IsBlocked = true;
+                _debitCardRepository.Update(card);
+                return new Response { Success = false, Message = "La tarjeta ha sido bloqueada por múltiples intentos fallidos." };
+            }
+            
+            return new Response { Success = false, Message = $"Contraseña incorrecta.\nSi falla {3 - failedAttempts} veces más se bloqueará la tarjeta." };
         }
     }
 }

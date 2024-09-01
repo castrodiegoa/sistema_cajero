@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
             btnExit = new Button();
             btnGetInto = new Button();
@@ -38,6 +39,7 @@
             txtPhoneNumber = new TextBox();
             txtDynamicKey = new TextBox();
             label4 = new Label();
+            InactivityTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
@@ -143,6 +145,11 @@
             label4.TabIndex = 51;
             label4.Text = "Clave dinámica:";
             // 
+            // InactivityTimer
+            // 
+            InactivityTimer.Interval = 30000;
+            InactivityTimer.Tick += InactivityTimer_Tick;
+            // 
             // FormStep1LoginNequiAccountATM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -161,6 +168,7 @@
             Controls.Add(txtPhoneNumber);
             Name = "FormStep1LoginNequiAccountATM";
             Text = "FormStep1LoginNequiAccountATM";
+            FormClosing += FormStep1LoginNequiAccountATM_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,5 +185,6 @@
         private TextBox txtPhoneNumber;
         private TextBox txtDynamicKey;
         private Label label4;
+        private System.Windows.Forms.Timer InactivityTimer;
     }
 }

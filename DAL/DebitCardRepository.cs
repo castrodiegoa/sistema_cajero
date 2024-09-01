@@ -25,24 +25,24 @@ namespace DAL
                 using (var connection = _databaseConnection.GetConnection())
                 {
                     connection.Open();
-                    var command = new MySqlCommand("INSERT INTO DebitCards (cardholder_name, card_number, card_password, available_balance) VALUES (@holderName, @number, @password, @balance)", connection);
+                    var command = new MySqlCommand(
+                        "INSERT INTO DebitCards (cardholder_name, card_number, card_password, available_balance, isBlocked) " +
+                        "VALUES (@holderName, @number, @password, @balance, @isBlocked)", connection);
 
                     command.Parameters.AddWithValue("@holderName", card.CardHolderName);
                     command.Parameters.AddWithValue("@number", card.CardNumber);
                     command.Parameters.AddWithValue("@password", card.Password);
                     command.Parameters.AddWithValue("@balance", card.AvailableBalance);
+                    command.Parameters.AddWithValue("@isBlocked", card.IsBlocked);
 
                     command.ExecuteNonQuery();
                 }
-
             }
             catch (MySqlException ex)
             {
-
                 throw new InvalidOperationException("Ocurrió un error al guardar la tarjeta de débito en la base de datos.", ex);
             }
         }
-
 
         public DebitCard GetById(int id)
         {
@@ -65,6 +65,7 @@ namespace DAL
                                 CardNumber = reader.GetString("card_number"),
                                 Password = reader.GetString("card_password"),
                                 AvailableBalance = reader.GetDecimal("available_balance"),
+                                IsBlocked = reader.GetBoolean("isBlocked"), // Leer el estado de bloqueo
                                 CreationDate = reader.GetDateTime("created_at")
                             };
                         }
@@ -85,12 +86,15 @@ namespace DAL
                 using (var connection = _databaseConnection.GetConnection())
                 {
                     connection.Open();
-                    var command = new MySqlCommand("UPDATE DebitCards SET cardholder_name = @holderName, card_number = @number, card_password = @password, available_balance = @balance WHERE id = @id", connection);
+                    var command = new MySqlCommand(
+                        "UPDATE DebitCards SET cardholder_name = @holderName, card_number = @number, card_password = @password, " +
+                        "available_balance = @balance, isBlocked = @isBlocked WHERE id = @id", connection);
 
                     command.Parameters.AddWithValue("@holderName", card.CardHolderName);
                     command.Parameters.AddWithValue("@number", card.CardNumber);
                     command.Parameters.AddWithValue("@password", card.Password);
                     command.Parameters.AddWithValue("@balance", card.AvailableBalance);
+                    command.Parameters.AddWithValue("@isBlocked", card.IsBlocked); // Actualiza el estado de bloqueo
                     command.Parameters.AddWithValue("@id", card.Id);
 
                     command.ExecuteNonQuery();
@@ -98,7 +102,6 @@ namespace DAL
             }
             catch (MySqlException ex)
             {
-
                 throw new InvalidOperationException("Ocurrió un error al actualizar la tarjeta de débito en la base de datos.", ex);
             }
         }
@@ -143,6 +146,7 @@ namespace DAL
                                 CardNumber = reader.GetString("card_number"),
                                 Password = reader.GetString("card_password"),
                                 AvailableBalance = reader.GetDecimal("available_balance"),
+                                IsBlocked = reader.GetBoolean("isBlocked"), // Leer el estado de bloqueo
                                 CreationDate = reader.GetDateTime("created_at")
                             };
                         }

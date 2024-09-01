@@ -6,12 +6,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
+using System.Security.Principal;
 
 namespace BLL
 {
     public class NequiAccountService
     {
         private readonly INequiAccountRepository _nequiAccountRepository;
+        private int failedAttempts = 0;
 
         public NequiAccountService(INequiAccountRepository nequiAccountRepository)
         {
@@ -38,8 +41,14 @@ namespace BLL
                 return new Response { Success = false, Message = "Saldo inválido. (Mayor o igual a 0)" };
             }
 
+            if (ValidationHelper.IsPhoneInitWithZero(account.AccountNumber))
+            {
+                return new Response { Success = false, Message = "El número no puede iniciar por 0." };
+            }
+
             try
             {
+                //account.AccountNumber = "0" + account.AccountNumber;
                 _nequiAccountRepository.Add(account);
                 return new Response { Success = true, Message = "Cuenta Nequi registrada con éxito." };
             }
@@ -52,6 +61,15 @@ namespace BLL
 
         public NequiAccount GetNequiAccountById(int id)
         {
+            //var account = _nequiAccountRepository.GetById(id);
+
+            //if (account != null && account.AccountNumber.StartsWith("0"))
+            //{
+            //    account.AccountNumber = account.AccountNumber.Substring(1);
+            //}
+
+            //return account;
+
             return _nequiAccountRepository.GetById(id);
         }
 
@@ -91,6 +109,17 @@ namespace BLL
 
         public NequiAccount GetAccountByPhoneNumber(string phoneNumber)
         {
+            //string formattedPhoneNumber = "0" + phoneNumber;
+            //var account = _nequiAccountRepository.GetAccountByPhoneNumber(formattedPhoneNumber);
+
+            // Si se encuentra la cuenta, eliminar el '0' al devolver el número
+            //if (account != null && account.AccountNumber.StartsWith("0"))
+            //{
+            //    account.AccountNumber = account.AccountNumber.Substring(1);
+            //}
+
+            //return account;
+
             return _nequiAccountRepository.GetAccountByPhoneNumber(phoneNumber);
         }
 
@@ -107,8 +136,14 @@ namespace BLL
                 return new Response { Success = false, Message = "Número de teléfono no registrado." };
             }
 
+            if (account.IsBlocked)
+            {
+                return new Response { Success = false, Message = "La cuenta está bloqueada." };
+            }
+
             if (account.Password == password)
             {
+
                 return new Response { Success = true, Message = "Autenticación satisfactoria." };
             }
 
@@ -125,12 +160,25 @@ namespace BLL
                 return response;
             }
 
-            if (dynamicKey != nequiAccount.DynamicKey)
+            if (dynamicKey == nequiAccount.DynamicKey)
             {
-                return new Response { Success = false, Message = "Clave dinámica incorrecta." };
+                failedAttempts = 0;
+                return new Response { Success = true, Message = $"Clave dinámica correcta." };
+
+            }
+            else
+            {
+                failedAttempts++;
             }
 
-            return new Response { Success = true, Message = "Clave dinámica correcta." };
+            if (failedAttempts >= 3)
+            {
+                nequiAccount.IsBlocked = true;
+                _nequiAccountRepository.Update(nequiAccount);
+                return new Response { Success = false, Message = "La cuenta ha sido bloqueada por múltiples intentos fallidos." };
+            }
+
+            return new Response { Success = false, Message = $"Clave dinámica incorrecta.\nSi falla {3 - failedAttempts} veces más se bloqueará la cuenta." };
         }
 
         public Response SaveDinamicKeyToNequiAccount(NequiAccount account)
@@ -151,41 +199,20 @@ namespace BLL
 
         public Response DeleteDinamicKeyToNequiAccount(NequiAccount account)
         {
-            if (account == null)
+            // en caso de que se haga una retiro en el tiempo, toca actualizar el saldo 
+            var nequiAccount = _nequiAccountRepository.GetAccountByPhoneNumber(account.AccountNumber);
+
+            if (nequiAccount == null)
             {
                 return new Response { Success = false, Message = "Cuenta no puede ser nula a la hora de eliminar una clave dinamica." };
             }
 
-            ///// NO PONERLA NULAPORQUE DA ERROR
-            account.DynamicKey = string.Empty;
+            nequiAccount.DynamicKey = string.Empty;
 
-            _nequiAccountRepository.Update(account);
+            _nequiAccountRepository.Update(nequiAccount);
 
             return new Response { Success = true, Message = $"Clave dinámica eliminada con éxito al usuario {account.AccountHolderName}" };
         }
-
-        //public async Task<Response> ProcessDinamicKeyToNequiAccount(NequiAccount account)
-        //{
-        //    if (account == null)
-        //    {
-        //        return new Response { Success = false, Message = "Cuenta no puede ser nula a la hora de procesar una clave dinamica." };
-        //    }
-
-        //    var saveDynamicKey = SaveDinamicKeyToNequiAccount(account);
-
-        //    await Task.Delay(10000);
-
-        //    var deleteDynamicKey = DeleteDinamicKeyToNequiAccount(account);
-
-        //    if (!saveDynamicKey.Success || !deleteDynamicKey.Success)
-        //    {
-        //        return new Response { Success = false, Message = "Ha ocurrido un inconveniente en el proceso de clave de dinámica." };
-        //    }
-
-        //    var updatedAccount = GetAccountByPhoneNumber(account.AccountNumber);
-
-        //    return new Response { Success = false, Message = "Proceso de clave de dinámica realizado correctamente." };
-        //}
 
         private string GenerateDynamicKey()
         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panelSlideMenu = new Panel();
             panelAboutSubmenu = new Panel();
@@ -44,18 +45,21 @@
             btnRegisterDebitCard = new Button();
             btnManageDebitCard = new Button();
             panelAtmSubmenu = new Panel();
-            btnWithdrawWithNequi = new Button();
-            btnWithdrawWithCreditCard = new Button();
+            btnWithdrawMoney = new Button();
             btnAtm = new Button();
             panelLogo = new Panel();
             panelHour = new Panel();
+            label2 = new Label();
+            label1 = new Label();
             panelChildForm = new Panel();
             pictureBox1 = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             panelSlideMenu.SuspendLayout();
             panelAboutSubmenu.SuspendLayout();
             panelNequiSubmenu.SuspendLayout();
             panelManageDebitCardSubmenu.SuspendLayout();
             panelAtmSubmenu.SuspendLayout();
+            panelHour.SuspendLayout();
             panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -85,7 +89,7 @@
             panelAboutSubmenu.Controls.Add(btnAboutManageDebitCard);
             panelAboutSubmenu.Controls.Add(btnAboutAtm);
             panelAboutSubmenu.Dock = DockStyle.Top;
-            panelAboutSubmenu.Location = new Point(0, 535);
+            panelAboutSubmenu.Location = new Point(0, 496);
             panelAboutSubmenu.Name = "panelAboutSubmenu";
             panelAboutSubmenu.Size = new Size(250, 130);
             panelAboutSubmenu.TabIndex = 7;
@@ -144,7 +148,7 @@
             btnAbout.FlatAppearance.BorderSize = 0;
             btnAbout.FlatStyle = FlatStyle.Flat;
             btnAbout.ForeColor = Color.Gainsboro;
-            btnAbout.Location = new Point(0, 490);
+            btnAbout.Location = new Point(0, 451);
             btnAbout.Name = "btnAbout";
             btnAbout.Padding = new Padding(10, 0, 0, 0);
             btnAbout.Size = new Size(250, 45);
@@ -160,7 +164,7 @@
             panelNequiSubmenu.Controls.Add(btnLoginNequi);
             panelNequiSubmenu.Controls.Add(btnRegisterNequi);
             panelNequiSubmenu.Dock = DockStyle.Top;
-            panelNequiSubmenu.Location = new Point(0, 405);
+            panelNequiSubmenu.Location = new Point(0, 366);
             panelNequiSubmenu.Name = "panelNequiSubmenu";
             panelNequiSubmenu.Size = new Size(250, 85);
             panelNequiSubmenu.TabIndex = 5;
@@ -203,7 +207,7 @@
             btnNequi.FlatAppearance.BorderSize = 0;
             btnNequi.FlatStyle = FlatStyle.Flat;
             btnNequi.ForeColor = Color.Gainsboro;
-            btnNequi.Location = new Point(0, 360);
+            btnNequi.Location = new Point(0, 321);
             btnNequi.Name = "btnNequi";
             btnNequi.Padding = new Padding(10, 0, 0, 0);
             btnNequi.Size = new Size(250, 45);
@@ -219,7 +223,7 @@
             panelManageDebitCardSubmenu.Controls.Add(btnRechargeDebitCard);
             panelManageDebitCardSubmenu.Controls.Add(btnRegisterDebitCard);
             panelManageDebitCardSubmenu.Dock = DockStyle.Top;
-            panelManageDebitCardSubmenu.Location = new Point(0, 275);
+            panelManageDebitCardSubmenu.Location = new Point(0, 236);
             panelManageDebitCardSubmenu.Name = "panelManageDebitCardSubmenu";
             panelManageDebitCardSubmenu.Size = new Size(250, 85);
             panelManageDebitCardSubmenu.TabIndex = 3;
@@ -262,7 +266,7 @@
             btnManageDebitCard.FlatAppearance.BorderSize = 0;
             btnManageDebitCard.FlatStyle = FlatStyle.Flat;
             btnManageDebitCard.ForeColor = Color.Gainsboro;
-            btnManageDebitCard.Location = new Point(0, 230);
+            btnManageDebitCard.Location = new Point(0, 191);
             btnManageDebitCard.Name = "btnManageDebitCard";
             btnManageDebitCard.Padding = new Padding(10, 0, 0, 0);
             btnManageDebitCard.Size = new Size(250, 45);
@@ -275,45 +279,28 @@
             // panelAtmSubmenu
             // 
             panelAtmSubmenu.BackColor = Color.FromArgb(35, 32, 39);
-            panelAtmSubmenu.Controls.Add(btnWithdrawWithNequi);
-            panelAtmSubmenu.Controls.Add(btnWithdrawWithCreditCard);
+            panelAtmSubmenu.Controls.Add(btnWithdrawMoney);
             panelAtmSubmenu.Dock = DockStyle.Top;
             panelAtmSubmenu.Location = new Point(0, 145);
             panelAtmSubmenu.Name = "panelAtmSubmenu";
-            panelAtmSubmenu.Size = new Size(250, 85);
+            panelAtmSubmenu.Size = new Size(250, 46);
             panelAtmSubmenu.TabIndex = 1;
             // 
-            // btnWithdrawWithNequi
+            // btnWithdrawMoney
             // 
-            btnWithdrawWithNequi.Dock = DockStyle.Top;
-            btnWithdrawWithNequi.FlatAppearance.BorderSize = 0;
-            btnWithdrawWithNequi.FlatStyle = FlatStyle.Flat;
-            btnWithdrawWithNequi.ForeColor = Color.Gainsboro;
-            btnWithdrawWithNequi.Location = new Point(0, 40);
-            btnWithdrawWithNequi.Name = "btnWithdrawWithNequi";
-            btnWithdrawWithNequi.Padding = new Padding(35, 0, 0, 0);
-            btnWithdrawWithNequi.Size = new Size(250, 40);
-            btnWithdrawWithNequi.TabIndex = 2;
-            btnWithdrawWithNequi.Text = "Retirar con Nequi";
-            btnWithdrawWithNequi.TextAlign = ContentAlignment.MiddleLeft;
-            btnWithdrawWithNequi.UseVisualStyleBackColor = true;
-            btnWithdrawWithNequi.Click += btnWithdrawWithNequi_Click;
-            // 
-            // btnWithdrawWithCreditCard
-            // 
-            btnWithdrawWithCreditCard.Dock = DockStyle.Top;
-            btnWithdrawWithCreditCard.FlatAppearance.BorderSize = 0;
-            btnWithdrawWithCreditCard.FlatStyle = FlatStyle.Flat;
-            btnWithdrawWithCreditCard.ForeColor = Color.Gainsboro;
-            btnWithdrawWithCreditCard.Location = new Point(0, 0);
-            btnWithdrawWithCreditCard.Name = "btnWithdrawWithCreditCard";
-            btnWithdrawWithCreditCard.Padding = new Padding(35, 0, 0, 0);
-            btnWithdrawWithCreditCard.Size = new Size(250, 40);
-            btnWithdrawWithCreditCard.TabIndex = 1;
-            btnWithdrawWithCreditCard.Text = "Retirar con Tarjeta de Crédito";
-            btnWithdrawWithCreditCard.TextAlign = ContentAlignment.MiddleLeft;
-            btnWithdrawWithCreditCard.UseVisualStyleBackColor = true;
-            btnWithdrawWithCreditCard.Click += btnWithdrawWithCreditCard_Click;
+            btnWithdrawMoney.Dock = DockStyle.Top;
+            btnWithdrawMoney.FlatAppearance.BorderSize = 0;
+            btnWithdrawMoney.FlatStyle = FlatStyle.Flat;
+            btnWithdrawMoney.ForeColor = Color.Gainsboro;
+            btnWithdrawMoney.Location = new Point(0, 0);
+            btnWithdrawMoney.Name = "btnWithdrawMoney";
+            btnWithdrawMoney.Padding = new Padding(35, 0, 0, 0);
+            btnWithdrawMoney.Size = new Size(250, 40);
+            btnWithdrawMoney.TabIndex = 1;
+            btnWithdrawMoney.Text = "Retirar Dinero";
+            btnWithdrawMoney.TextAlign = ContentAlignment.MiddleLeft;
+            btnWithdrawMoney.UseVisualStyleBackColor = true;
+            btnWithdrawMoney.Click += btnWithdrawWithCreditCard_Click;
             // 
             // btnAtm
             // 
@@ -342,11 +329,36 @@
             // panelHour
             // 
             panelHour.BackColor = Color.FromArgb(23, 21, 32);
+            panelHour.Controls.Add(label2);
+            panelHour.Controls.Add(label1);
             panelHour.Dock = DockStyle.Bottom;
             panelHour.Location = new Point(250, 461);
             panelHour.Name = "panelHour";
             panelHour.Size = new Size(684, 100);
             panelHour.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Gainsboro;
+            label2.Location = new Point(89, 56);
+            label2.Name = "label2";
+            label2.Size = new Size(45, 19);
+            label2.TabIndex = 1;
+            label2.Text = "label2";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Gainsboro;
+            label1.Location = new Point(84, 13);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 41);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
+            label1.Click += label1_Click;
             // 
             // panelChildForm
             // 
@@ -369,6 +381,12 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -386,6 +404,8 @@
             panelNequiSubmenu.ResumeLayout(false);
             panelManageDebitCardSubmenu.ResumeLayout(false);
             panelAtmSubmenu.ResumeLayout(false);
+            panelHour.ResumeLayout(false);
+            panelHour.PerformLayout();
             panelChildForm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -395,10 +415,9 @@
 
         private Panel panelSlideMenu;
         private Panel panelAtmSubmenu;
-        private Button btnWithdrawWithCreditCard;
+        private Button btnWithdrawMoney;
         private Button btnAtm;
         private Panel panelLogo;
-        private Button btnWithdrawWithNequi;
         private Button btnNequi;
         private Panel panelManageDebitCardSubmenu;
         private Button btnRechargeDebitCard;
@@ -415,5 +434,8 @@
         private Panel panelHour;
         private Panel panelChildForm;
         private PictureBox pictureBox1;
+        private Label label2;
+        private Label label1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

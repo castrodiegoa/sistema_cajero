@@ -169,5 +169,15 @@ namespace sistema_cajero
             childForm.Show();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.label1.Text = DateTime.Now.ToString("hh:mm:ss");
+            this.label2.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
