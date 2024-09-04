@@ -99,6 +99,7 @@
             btnAboutNequi.Dock = DockStyle.Top;
             btnAboutNequi.FlatAppearance.BorderSize = 0;
             btnAboutNequi.FlatStyle = FlatStyle.Flat;
+            btnAboutNequi.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnAboutNequi.ForeColor = Color.Gainsboro;
             btnAboutNequi.Location = new Point(0, 80);
             btnAboutNequi.Name = "btnAboutNequi";
@@ -115,6 +116,7 @@
             btnAboutManageDebitCard.Dock = DockStyle.Top;
             btnAboutManageDebitCard.FlatAppearance.BorderSize = 0;
             btnAboutManageDebitCard.FlatStyle = FlatStyle.Flat;
+            btnAboutManageDebitCard.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnAboutManageDebitCard.ForeColor = Color.Gainsboro;
             btnAboutManageDebitCard.Location = new Point(0, 40);
             btnAboutManageDebitCard.Name = "btnAboutManageDebitCard";
@@ -131,6 +133,7 @@
             btnAboutAtm.Dock = DockStyle.Top;
             btnAboutAtm.FlatAppearance.BorderSize = 0;
             btnAboutAtm.FlatStyle = FlatStyle.Flat;
+            btnAboutAtm.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnAboutAtm.ForeColor = Color.Gainsboro;
             btnAboutAtm.Location = new Point(0, 0);
             btnAboutAtm.Name = "btnAboutAtm";
@@ -147,6 +150,7 @@
             btnAbout.Dock = DockStyle.Top;
             btnAbout.FlatAppearance.BorderSize = 0;
             btnAbout.FlatStyle = FlatStyle.Flat;
+            btnAbout.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAbout.ForeColor = Color.Gainsboro;
             btnAbout.Location = new Point(0, 451);
             btnAbout.Name = "btnAbout";
@@ -174,6 +178,7 @@
             btnLoginNequi.Dock = DockStyle.Top;
             btnLoginNequi.FlatAppearance.BorderSize = 0;
             btnLoginNequi.FlatStyle = FlatStyle.Flat;
+            btnLoginNequi.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnLoginNequi.ForeColor = Color.Gainsboro;
             btnLoginNequi.Location = new Point(0, 40);
             btnLoginNequi.Name = "btnLoginNequi";
@@ -190,6 +195,7 @@
             btnRegisterNequi.Dock = DockStyle.Top;
             btnRegisterNequi.FlatAppearance.BorderSize = 0;
             btnRegisterNequi.FlatStyle = FlatStyle.Flat;
+            btnRegisterNequi.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnRegisterNequi.ForeColor = Color.Gainsboro;
             btnRegisterNequi.Location = new Point(0, 0);
             btnRegisterNequi.Name = "btnRegisterNequi";
@@ -206,6 +212,7 @@
             btnNequi.Dock = DockStyle.Top;
             btnNequi.FlatAppearance.BorderSize = 0;
             btnNequi.FlatStyle = FlatStyle.Flat;
+            btnNequi.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnNequi.ForeColor = Color.Gainsboro;
             btnNequi.Location = new Point(0, 321);
             btnNequi.Name = "btnNequi";
@@ -233,6 +240,7 @@
             btnRechargeDebitCard.Dock = DockStyle.Top;
             btnRechargeDebitCard.FlatAppearance.BorderSize = 0;
             btnRechargeDebitCard.FlatStyle = FlatStyle.Flat;
+            btnRechargeDebitCard.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnRechargeDebitCard.ForeColor = Color.Gainsboro;
             btnRechargeDebitCard.Location = new Point(0, 40);
             btnRechargeDebitCard.Name = "btnRechargeDebitCard";
@@ -249,6 +257,7 @@
             btnRegisterDebitCard.Dock = DockStyle.Top;
             btnRegisterDebitCard.FlatAppearance.BorderSize = 0;
             btnRegisterDebitCard.FlatStyle = FlatStyle.Flat;
+            btnRegisterDebitCard.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnRegisterDebitCard.ForeColor = Color.Gainsboro;
             btnRegisterDebitCard.Location = new Point(0, 0);
             btnRegisterDebitCard.Name = "btnRegisterDebitCard";
@@ -265,6 +274,7 @@
             btnManageDebitCard.Dock = DockStyle.Top;
             btnManageDebitCard.FlatAppearance.BorderSize = 0;
             btnManageDebitCard.FlatStyle = FlatStyle.Flat;
+            btnManageDebitCard.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnManageDebitCard.ForeColor = Color.Gainsboro;
             btnManageDebitCard.Location = new Point(0, 191);
             btnManageDebitCard.Name = "btnManageDebitCard";
@@ -291,6 +301,7 @@
             btnWithdrawMoney.Dock = DockStyle.Top;
             btnWithdrawMoney.FlatAppearance.BorderSize = 0;
             btnWithdrawMoney.FlatStyle = FlatStyle.Flat;
+            btnWithdrawMoney.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             btnWithdrawMoney.ForeColor = Color.Gainsboro;
             btnWithdrawMoney.Location = new Point(0, 0);
             btnWithdrawMoney.Name = "btnWithdrawMoney";
@@ -307,6 +318,7 @@
             btnAtm.Dock = DockStyle.Top;
             btnAtm.FlatAppearance.BorderSize = 0;
             btnAtm.FlatStyle = FlatStyle.Flat;
+            btnAtm.Font = new Font("Bahnschrift", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAtm.ForeColor = Color.Gainsboro;
             btnAtm.Location = new Point(0, 100);
             btnAtm.Name = "btnAtm";
@@ -340,29 +352,29 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Gainsboro;
             label2.Location = new Point(89, 56);
             label2.Name = "label2";
-            label2.Size = new Size(45, 19);
+            label2.Size = new Size(42, 19);
             label2.TabIndex = 1;
             label2.Text = "label2";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Bahnschrift Condensed", 24F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.Gainsboro;
             label1.Location = new Point(84, 13);
             label1.Name = "label1";
-            label1.Size = new Size(97, 41);
+            label1.Size = new Size(79, 39);
             label1.TabIndex = 0;
             label1.Text = "label1";
             label1.Click += label1_Click;
             // 
             // panelChildForm
             // 
-            panelChildForm.BackColor = Color.FromArgb(32, 30, 45);
+            panelChildForm.BackColor = Color.White;
             panelChildForm.Controls.Add(pictureBox1);
             panelChildForm.Dock = DockStyle.Fill;
             panelChildForm.Location = new Point(250, 0);

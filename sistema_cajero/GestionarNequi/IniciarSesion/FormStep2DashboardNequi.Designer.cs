@@ -42,98 +42,126 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.ForeColor = Color.Gainsboro;
-            label1.Location = new Point(189, 48);
+            label1.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(231, 234, 239);
+            label1.Location = new Point(189, 16);
             label1.Name = "label1";
-            label1.Size = new Size(35, 15);
+            label1.Size = new Size(39, 22);
             label1.TabIndex = 0;
             label1.Text = "Hola,";
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
-            label2.ForeColor = Color.Gainsboro;
-            label2.Location = new Point(189, 75);
+            label2.Font = new Font("Bahnschrift Condensed", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(231, 234, 239);
+            label2.Location = new Point(189, 43);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(58, 28);
             label2.TabIndex = 1;
             label2.Text = "label2";
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
-            label3.ForeColor = Color.Gainsboro;
-            label3.Location = new Point(251, 109);
+            label3.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(231, 234, 239);
+            label3.Location = new Point(280, 108);
             label3.Name = "label3";
-            label3.Size = new Size(119, 15);
+            label3.Size = new Size(132, 22);
             label3.TabIndex = 2;
             label3.Text = "Depósito Bajo Monto";
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
-            label4.ForeColor = Color.Gainsboro;
-            label4.Location = new Point(294, 134);
+            label4.Font = new Font("Bahnschrift Condensed", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(231, 234, 239);
+            label4.Location = new Point(279, 135);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(72, 33);
             label4.TabIndex = 3;
             label4.Text = "label4";
             // 
             // btnAction
             // 
-            btnAction.Location = new Point(383, 355);
+            btnAction.Anchor = AnchorStyles.Bottom;
+            btnAction.BackColor = Color.FromArgb(219, 0, 130);
+            btnAction.FlatStyle = FlatStyle.Popup;
+            btnAction.Font = new Font("Bahnschrift Condensed", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAction.ForeColor = Color.FromArgb(231, 234, 239);
+            btnAction.Location = new Point(449, 355);
             btnAction.Name = "btnAction";
             btnAction.Size = new Size(44, 39);
             btnAction.TabIndex = 4;
             btnAction.Text = "$";
-            btnAction.UseVisualStyleBackColor = true;
+            btnAction.UseVisualStyleBackColor = false;
             btnAction.Click += btnAction_Click;
             // 
             // panelActionsNequiSubmenu
             // 
             panelActionsNequiSubmenu.Controls.Add(btnRecharge);
             panelActionsNequiSubmenu.Controls.Add(btnWithdraw);
-            panelActionsNequiSubmenu.Location = new Point(294, 240);
+            panelActionsNequiSubmenu.Location = new Point(360, 184);
             panelActionsNequiSubmenu.Name = "panelActionsNequiSubmenu";
             panelActionsNequiSubmenu.Size = new Size(133, 109);
             panelActionsNequiSubmenu.TabIndex = 5;
             // 
             // btnRecharge
             // 
+            btnRecharge.Anchor = AnchorStyles.Bottom;
+            btnRecharge.BackColor = Color.FromArgb(219, 0, 130);
+            btnRecharge.FlatStyle = FlatStyle.Popup;
+            btnRecharge.Font = new Font("Bahnschrift Condensed", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRecharge.ForeColor = Color.FromArgb(231, 234, 239);
             btnRecharge.Location = new Point(14, 57);
             btnRecharge.Name = "btnRecharge";
             btnRecharge.Size = new Size(106, 34);
             btnRecharge.TabIndex = 7;
             btnRecharge.Text = "Recarga Nequi";
-            btnRecharge.UseVisualStyleBackColor = true;
+            btnRecharge.UseVisualStyleBackColor = false;
             btnRecharge.Click += btnRecharge_Click;
             // 
             // btnWithdraw
             // 
+            btnWithdraw.Anchor = AnchorStyles.Bottom;
+            btnWithdraw.BackColor = Color.FromArgb(219, 0, 130);
+            btnWithdraw.FlatStyle = FlatStyle.Popup;
+            btnWithdraw.Font = new Font("Bahnschrift Condensed", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWithdraw.ForeColor = Color.FromArgb(231, 234, 239);
             btnWithdraw.Location = new Point(14, 18);
             btnWithdraw.Name = "btnWithdraw";
             btnWithdraw.Size = new Size(106, 33);
             btnWithdraw.TabIndex = 6;
             btnWithdraw.Text = "Saca";
-            btnWithdraw.UseVisualStyleBackColor = true;
+            btnWithdraw.UseVisualStyleBackColor = false;
             btnWithdraw.Click += btnWithdraw_Click;
             // 
             // btnLogOut
             // 
+            btnLogOut.Anchor = AnchorStyles.Bottom;
+            btnLogOut.BackColor = Color.FromArgb(219, 0, 130);
+            btnLogOut.FlatStyle = FlatStyle.Popup;
+            btnLogOut.Font = new Font("Bahnschrift Condensed", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnLogOut.ForeColor = Color.FromArgb(231, 234, 239);
             btnLogOut.Location = new Point(189, 355);
             btnLogOut.Name = "btnLogOut";
             btnLogOut.Size = new Size(44, 39);
             btnLogOut.TabIndex = 6;
             btnLogOut.Text = "Salir";
-            btnLogOut.UseVisualStyleBackColor = true;
+            btnLogOut.UseVisualStyleBackColor = false;
             btnLogOut.Click += btnLogOut_Click;
             // 
             // FormStep2DashboardNequi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(32, 30, 45);
+            BackColor = Color.FromArgb(26, 0, 26);
             ClientSize = new Size(684, 461);
             Controls.Add(btnLogOut);
             Controls.Add(panelActionsNequiSubmenu);

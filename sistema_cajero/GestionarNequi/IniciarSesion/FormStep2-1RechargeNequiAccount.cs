@@ -43,7 +43,7 @@ namespace GUI.GestionarNequi.IniciarSesion
             decimal amount;
             try
             {
-                
+
                 // Validar el monto
                 if (!decimal.TryParse(txtAmountToRecharge.Text, out amount))
                 {
@@ -60,12 +60,17 @@ namespace GUI.GestionarNequi.IniciarSesion
                 {
                     txtAmountToRecharge.Clear();
                 }
-                
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

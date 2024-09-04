@@ -38,7 +38,7 @@ namespace GUI.GestionarNequi
         {
             panelActionsNequiSubmenu.Visible = false;
             label2.Text = nequiAccount.AccountHolderName;
-            label4.Text = nequiAccount.AvailableBalance.ToString();
+            label4.Text = "$" + nequiAccount.AvailableBalance.ToString();
         }
 
 
@@ -78,8 +78,8 @@ namespace GUI.GestionarNequi
             }
 
             DateTime now = DateTime.Now;
-            DateTime futureDate = now.AddSeconds(30);
-            string futureDateString = futureDate.ToString("dd-MM-yyyy HH:mm:ss");
+            DateTime futureDate = now.AddSeconds(60);
+            string futureDateString = futureDate.ToString("HH:mm:ss");
 
             var updatedAccount = nequiAccountService.GetAccountByPhoneNumber(nequiAccount.AccountNumber);
             mainForm.openChildForm(new FormStep2_2WithdrawMoneyNequiAccount(mainForm, updatedAccount, futureDateString));

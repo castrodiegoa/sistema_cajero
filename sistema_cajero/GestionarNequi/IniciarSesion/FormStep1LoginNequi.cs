@@ -63,5 +63,10 @@ namespace GUI.GestionarNequi.IniciarSesion
                 MessageBox.Show("Ocurrió un error inesperado: " + ex);
             }
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

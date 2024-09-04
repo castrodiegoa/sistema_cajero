@@ -37,14 +37,14 @@ namespace GUI.GestionarNequi.IniciarSesion
         {
             label2.Text = nequiAccount.DynamicKey;
             label5.Text = futureDate;
-            await Task.Delay(60000);
+            await Task.Delay(60000); // Tiempo antes de eliminar la clave dinámica
 
             var deleteDynamicKey = nequiAccountService.DeleteDinamicKeyToNequiAccount(nequiAccount);
-            
+
             if (deleteDynamicKey.Success)
             {
                 MessageBox.Show(deleteDynamicKey.Message);
-                
+
             }
             else
             {
@@ -56,6 +56,11 @@ namespace GUI.GestionarNequi.IniciarSesion
         {
             this.Close();
             mainForm.openChildForm(new FormStep2DashboardNequi(mainForm, nequiAccount));
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
