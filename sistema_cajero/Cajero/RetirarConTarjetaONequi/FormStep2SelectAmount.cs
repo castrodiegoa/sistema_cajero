@@ -47,12 +47,12 @@ namespace sistema_cajero
             if (card != null)
             {
                 label6.Text = card.CardHolderName.ToString();
-                label8.Text = card.AvailableBalance.ToString();
+                label8.Text = "$" + card.AvailableBalance.ToString();
             }
             else if (account != null)
             {
                 label6.Text = account.AccountHolderName.ToString();
-                label8.Text = account.AvailableBalance.ToString();
+                label8.Text = "$" + account.AvailableBalance.ToString();
             }
 
         }
@@ -111,7 +111,7 @@ namespace sistema_cajero
 
         private void btn50000_Click(object sender, EventArgs e)
         {
-            HandleWithdraw(50_000);
+            HandleWithdraw(20_000);
         }
 
         private void btnOther_Click(object sender, EventArgs e)
@@ -141,27 +141,27 @@ namespace sistema_cajero
 
         private void btn200_000_Click(object sender, EventArgs e)
         {
-            HandleWithdraw(200_000);
+            HandleWithdraw(300_000);
         }
 
         private void btn300_000_Click(object sender, EventArgs e)
         {
-            HandleWithdraw(300_000);
+            HandleWithdraw(1_000_000);
         }
 
         private void btn400_000_Click(object sender, EventArgs e)
         {
-            HandleWithdraw(400_000);
+            HandleWithdraw(50_000);
         }
 
         private void btn500_000_Click(object sender, EventArgs e)
         {
-            HandleWithdraw(500_000);
+            HandleWithdraw(200_000);
         }
 
         private void btn600_000_Click(object sender, EventArgs e)
         {
-            HandleWithdraw(600_000);
+            HandleWithdraw(500_000);
         }
 
         private void FormStep2SelectAmount_FormClosing(object sender, FormClosingEventArgs e)
@@ -177,6 +177,11 @@ namespace sistema_cajero
                                 "Tiempo Excedido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -52,6 +52,8 @@
             label2 = new Label();
             label1 = new Label();
             panelChildForm = new Panel();
+            label4 = new Label();
+            label3 = new Label();
             pictureBox1 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             panelSlideMenu.SuspendLayout();
@@ -375,6 +377,8 @@
             // panelChildForm
             // 
             panelChildForm.BackColor = Color.White;
+            panelChildForm.Controls.Add(label4);
+            panelChildForm.Controls.Add(label3);
             panelChildForm.Controls.Add(pictureBox1);
             panelChildForm.Dock = DockStyle.Fill;
             panelChildForm.Location = new Point(250, 0);
@@ -382,11 +386,35 @@
             panelChildForm.Size = new Size(684, 461);
             panelChildForm.TabIndex = 2;
             // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.Font = new Font("Bahnschrift Condensed", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(23, 21, 32);
+            label4.Location = new Point(238, 127);
+            label4.Name = "label4";
+            label4.Size = new Size(232, 29);
+            label4.TabIndex = 3;
+            label4.Text = "con Tarjetas Débito y Nequi.";
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Bahnschrift Condensed", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(23, 21, 32);
+            label3.Location = new Point(105, 79);
+            label3.Name = "label3";
+            label3.Size = new Size(473, 29);
+            label3.TabIndex = 2;
+            label3.Text = "Sistema de información para la gestión y retiro de dinero";
+            // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(144, 145);
+            pictureBox1.Location = new Point(144, 192);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(414, 185);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -410,7 +438,7 @@
             Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             MinimumSize = new Size(950, 600);
             Name = "FormMain";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             panelSlideMenu.ResumeLayout(false);
             panelAboutSubmenu.ResumeLayout(false);
             panelNequiSubmenu.ResumeLayout(false);
@@ -419,6 +447,7 @@
             panelHour.ResumeLayout(false);
             panelHour.PerformLayout();
             panelChildForm.ResumeLayout(false);
+            panelChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -449,5 +478,7 @@
         private Label label2;
         private Label label1;
         private System.Windows.Forms.Timer timer1;
+        private Label label4;
+        private Label label3;
     }
 }
