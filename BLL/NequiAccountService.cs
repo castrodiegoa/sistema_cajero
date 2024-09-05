@@ -33,7 +33,7 @@ namespace BLL
 
             if (!ValidationHelper.IsPasswordNequiValid(account.Password))
             {
-                return new Response { Success = false, Message = "Contraseña inválida. (4 caracteres)" };
+                return new Response { Success = false, Message = "Contraseña inválida. (4 dígitos)" };
             }
 
             if (!ValidationHelper.IsBalanceValid(account.AvailableBalance))
@@ -127,7 +127,7 @@ namespace BLL
         {
             if (!ValidationHelper.IsPasswordNequiValid(password))
             {
-                return new Response { Success = false, Message = "Contraseña inválida. (4 caracteres)" };
+                return new Response { Success = false, Message = "Contraseña inválida. (4 dígitos)" };
             }
 
             var account = GetAccountByPhoneNumber(phoneNumber);

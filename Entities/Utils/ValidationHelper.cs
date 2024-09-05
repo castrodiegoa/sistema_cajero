@@ -30,12 +30,12 @@ namespace Entities
 
         public static bool IsPasswordValid(string password)
         {
-            return password.Length == 4;
+            return password.Length == 4 && password.All(char.IsDigit);
         }
 
         public static bool IsPasswordNequiValid(string password)
         {
-            return password.Length == 4;
+            return password.Length == 4 && password.All(char.IsDigit);
         }
 
         public static bool IsBalanceValid(decimal balance)
