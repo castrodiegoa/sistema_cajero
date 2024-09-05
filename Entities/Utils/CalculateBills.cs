@@ -12,37 +12,33 @@ namespace Entities.Utils
 
         public static Dictionary<int, int> CalculateBillsQuantity(int requestedAmount)
         {
-            Dictionary<int, int> billsCount = InitializeMapBills();
-            int position = 0;
+            var billsCount = new Dictionary<int, int>();
+            foreach (int typeBill in typesBills)
+            {
+                billsCount[typeBill] = 0;
+            }
+
+            // Inicio del acarreo
+            int startIndex = 0;
 
             while (requestedAmount > 0)
             {
-                int bill = typesBills[position];
-                int index = position;
-
-                while (index < typesBills.Length &&
-                       bill <= requestedAmount &&
-                       requestedAmount > 0)
+                for (int i = startIndex; i < typesBills.Length; i++)
                 {
-                    billsCount[bill] += 1;
-                    requestedAmount -= bill;
-                    bill = typesBills[++index % typesBills.Length];
+                    int bill = typesBills[i];
+
+                    if (requestedAmount >= bill)
+                    {
+                        billsCount[bill]++;
+                        requestedAmount -= bill;
+                    }
                 }
 
-                position = ++position % typesBills.Length;
+                startIndex = (startIndex + 1) % typesBills.Length;
             }
 
             return billsCount;
         }
 
-        private static Dictionary<int, int> InitializeMapBills()
-        {
-            Dictionary<int, int> map = new Dictionary<int, int>();
-            foreach (int typeBill in typesBills)
-            {
-                map[typeBill] = 0;
-            }
-            return map;
-        }
     }
 }

@@ -34,7 +34,7 @@ namespace BLL
 
             if (!ValidationHelper.IsPasswordValid(card.Password))
             {
-                return new Response { Success = false, Message = "Contraseña inválida. (Mínimo 8 caracteres)" };
+                return new Response { Success = false, Message = "Contraseña inválida. (4 caracteres)" };
             }
 
             if (!ValidationHelper.IsBalanceValid(card.AvailableBalance))
@@ -100,7 +100,7 @@ namespace BLL
         {
             if (!ValidationHelper.IsPasswordValid(password))
             {
-                return new Response { Success = false, Message = "Contraseña inválida. (Mínimo 8 caracteres)" };
+                return new Response { Success = false, Message = "Contraseña inválida. (4 caracteres)" };
             }
 
             var card = GetDebitCardByNumber(cardNumber);

@@ -55,7 +55,7 @@ namespace sistema_cajero
                 // Validar número de tarjeta
                 if (!ValidationHelper.IsCardNumberValid(cardNumber))
                 {
-                    MessageBox.Show("Por favor, ingrese un número de tarjeta válido. (11 dígitos)");
+                    MessageBox.Show("Por favor, ingrese un número de tarjeta válido. (16 dígitos)");
                     return;
                 }
 

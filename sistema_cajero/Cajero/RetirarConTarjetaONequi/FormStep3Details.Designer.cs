@@ -179,7 +179,7 @@
             btnExit.Anchor = AnchorStyles.None;
             btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnExit.Location = new Point(321, 418);
+            btnExit.Location = new Point(321, 411);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(75, 23);
             btnExit.TabIndex = 11;

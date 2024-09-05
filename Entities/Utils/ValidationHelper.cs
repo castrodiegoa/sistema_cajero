@@ -10,7 +10,7 @@ namespace Entities
     {
         public static bool IsCardNumberValid(string cardNumber)
         {
-            return cardNumber.Length == 11 && cardNumber.All(char.IsDigit);
+            return cardNumber.Length == 16 && cardNumber.All(char.IsDigit);
         }
 
         public static bool IsPhoneNumberValid(string phoneNumber)
@@ -30,7 +30,7 @@ namespace Entities
 
         public static bool IsPasswordValid(string password)
         {
-            return password.Length >= 8;
+            return password.Length == 4;
         }
 
         public static bool IsPasswordNequiValid(string password)

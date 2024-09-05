@@ -29,11 +29,11 @@ namespace GUI.Cajero.RetirarConTarjetaONequi
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            if (radioBtnDebitCard.Checked == true)
+            if (radioBtnDebitCard.Checked)
             {
                 mainForm.openChildForm(new FormStep1LoginDebitCardATM(mainForm));
             }
-            else if (radioBtnNequiAccount.Checked == true)
+            else if (radioBtnNequiAccount.Checked)
             {
                 mainForm.openChildForm(new FormStep1LoginNequiAccountATM(mainForm));
             }

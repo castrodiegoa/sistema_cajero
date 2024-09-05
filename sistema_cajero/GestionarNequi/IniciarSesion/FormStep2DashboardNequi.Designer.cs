@@ -42,11 +42,11 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top;
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(231, 234, 239);
-            label1.Location = new Point(189, 16);
+            label1.Location = new Point(189, 30);
             label1.Name = "label1";
             label1.Size = new Size(39, 22);
             label1.TabIndex = 0;
@@ -54,11 +54,11 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top;
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Bahnschrift Condensed", 17F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(231, 234, 239);
-            label2.Location = new Point(189, 43);
+            label2.Location = new Point(189, 57);
             label2.Name = "label2";
             label2.Size = new Size(58, 28);
             label2.TabIndex = 1;
@@ -70,7 +70,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(231, 234, 239);
-            label3.Location = new Point(280, 108);
+            label3.Location = new Point(280, 122);
             label3.Name = "label3";
             label3.Size = new Size(132, 22);
             label3.TabIndex = 2;
@@ -82,7 +82,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Bahnschrift Condensed", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(231, 234, 239);
-            label4.Location = new Point(279, 135);
+            label4.Location = new Point(279, 149);
             label4.Name = "label4";
             label4.Size = new Size(72, 33);
             label4.TabIndex = 3;
@@ -90,7 +90,7 @@
             // 
             // btnAction
             // 
-            btnAction.Anchor = AnchorStyles.Bottom;
+            btnAction.Anchor = AnchorStyles.None;
             btnAction.BackColor = Color.FromArgb(219, 0, 130);
             btnAction.FlatStyle = FlatStyle.Popup;
             btnAction.Font = new Font("Bahnschrift Condensed", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
@@ -105,9 +105,10 @@
             // 
             // panelActionsNequiSubmenu
             // 
+            panelActionsNequiSubmenu.Anchor = AnchorStyles.None;
             panelActionsNequiSubmenu.Controls.Add(btnRecharge);
             panelActionsNequiSubmenu.Controls.Add(btnWithdraw);
-            panelActionsNequiSubmenu.Location = new Point(360, 184);
+            panelActionsNequiSubmenu.Location = new Point(360, 240);
             panelActionsNequiSubmenu.Name = "panelActionsNequiSubmenu";
             panelActionsNequiSubmenu.Size = new Size(133, 109);
             panelActionsNequiSubmenu.TabIndex = 5;
@@ -144,7 +145,7 @@
             // 
             // btnLogOut
             // 
-            btnLogOut.Anchor = AnchorStyles.Bottom;
+            btnLogOut.Anchor = AnchorStyles.None;
             btnLogOut.BackColor = Color.FromArgb(219, 0, 130);
             btnLogOut.FlatStyle = FlatStyle.Popup;
             btnLogOut.Font = new Font("Bahnschrift Condensed", 11.25F, FontStyle.Regular, GraphicsUnit.Point);

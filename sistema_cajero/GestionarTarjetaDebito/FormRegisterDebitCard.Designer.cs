@@ -53,7 +53,7 @@
             txtCardHolderName.Anchor = AnchorStyles.None;
             txtCardHolderName.BackColor = Color.FromArgb(10, 10, 10);
             txtCardHolderName.BorderStyle = BorderStyle.FixedSingle;
-            txtCardHolderName.ForeColor = Color.FromArgb(248, 248, 248);
+            txtCardHolderName.ForeColor = Color.White;
             txtCardHolderName.Location = new Point(258, 165);
             txtCardHolderName.Name = "txtCardHolderName";
             txtCardHolderName.Size = new Size(258, 23);
@@ -64,7 +64,7 @@
             txtCardNumber.Anchor = AnchorStyles.None;
             txtCardNumber.BackColor = Color.FromArgb(10, 10, 10);
             txtCardNumber.BorderStyle = BorderStyle.FixedSingle;
-            txtCardNumber.ForeColor = Color.FromArgb(248, 248, 248);
+            txtCardNumber.ForeColor = Color.White;
             txtCardNumber.Location = new Point(258, 214);
             txtCardNumber.Name = "txtCardNumber";
             txtCardNumber.Size = new Size(258, 23);
@@ -75,7 +75,7 @@
             txtPasswordCard.Anchor = AnchorStyles.None;
             txtPasswordCard.BackColor = Color.FromArgb(10, 10, 10);
             txtPasswordCard.BorderStyle = BorderStyle.FixedSingle;
-            txtPasswordCard.ForeColor = Color.FromArgb(248, 248, 248);
+            txtPasswordCard.ForeColor = Color.White;
             txtPasswordCard.Location = new Point(258, 256);
             txtPasswordCard.Name = "txtPasswordCard";
             txtPasswordCard.Size = new Size(258, 23);
@@ -86,7 +86,7 @@
             txtInitialBalance.Anchor = AnchorStyles.None;
             txtInitialBalance.BackColor = Color.FromArgb(10, 10, 10);
             txtInitialBalance.BorderStyle = BorderStyle.FixedSingle;
-            txtInitialBalance.ForeColor = Color.FromArgb(248, 248, 248);
+            txtInitialBalance.ForeColor = Color.White;
             txtInitialBalance.Location = new Point(258, 300);
             txtInitialBalance.Name = "txtInitialBalance";
             txtInitialBalance.Size = new Size(258, 23);

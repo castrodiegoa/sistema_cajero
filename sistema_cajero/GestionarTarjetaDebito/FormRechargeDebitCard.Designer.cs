@@ -136,6 +136,7 @@
             txtAmountToRecharge.Anchor = AnchorStyles.None;
             txtAmountToRecharge.BackColor = Color.FromArgb(10, 10, 10);
             txtAmountToRecharge.BorderStyle = BorderStyle.FixedSingle;
+            txtAmountToRecharge.ForeColor = Color.White;
             txtAmountToRecharge.Location = new Point(254, 286);
             txtAmountToRecharge.Name = "txtAmountToRecharge";
             txtAmountToRecharge.Size = new Size(258, 23);
@@ -147,6 +148,7 @@
             txtPasswordCard.Anchor = AnchorStyles.None;
             txtPasswordCard.BackColor = Color.FromArgb(10, 10, 10);
             txtPasswordCard.BorderStyle = BorderStyle.FixedSingle;
+            txtPasswordCard.ForeColor = Color.White;
             txtPasswordCard.Location = new Point(254, 243);
             txtPasswordCard.Name = "txtPasswordCard";
             txtPasswordCard.Size = new Size(258, 23);
@@ -157,6 +159,7 @@
             txtNumberCard.Anchor = AnchorStyles.None;
             txtNumberCard.BackColor = Color.FromArgb(10, 10, 10);
             txtNumberCard.BorderStyle = BorderStyle.FixedSingle;
+            txtNumberCard.ForeColor = Color.White;
             txtNumberCard.Location = new Point(254, 200);
             txtNumberCard.Name = "txtNumberCard";
             txtNumberCard.Size = new Size(258, 23);
