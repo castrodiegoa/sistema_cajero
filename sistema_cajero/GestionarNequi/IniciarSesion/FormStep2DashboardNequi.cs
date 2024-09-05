@@ -78,7 +78,7 @@ namespace GUI.GestionarNequi
             }
 
             DateTime now = DateTime.Now;
-            DateTime futureDate = now.AddSeconds(60);
+            DateTime futureDate = now.AddSeconds(300); // 5 min
             string futureDateString = futureDate.ToString("HH:mm:ss");
 
             var updatedAccount = nequiAccountService.GetAccountByPhoneNumber(nequiAccount.AccountNumber);
