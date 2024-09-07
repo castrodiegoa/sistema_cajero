@@ -51,11 +51,13 @@ namespace sistema_cajero
             {
                 label13.Text = card.AvailableBalance.ToString();
                 label14.Text = card.CardHolderName.ToString();
+                label1.Text = card.CardNumber.ToString();
             }
             else if (account != null)
             {
                 label13.Text = account.AvailableBalance.ToString();
                 label14.Text = account.AccountHolderName.ToString();
+                label1.Text = "0" + account.AccountNumber.ToString();
             }
 
             label15.Text = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");

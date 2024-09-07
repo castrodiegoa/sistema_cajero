@@ -51,6 +51,8 @@
             label19 = new Label();
             InactivityTimer = new System.Windows.Forms.Timer(components);
             pictureBox1 = new PictureBox();
+            label1 = new Label();
+            label20 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Bahnschrift Condensed", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(323, 48);
+            label2.Location = new Point(323, 27);
             label2.Name = "label2";
             label2.Size = new Size(73, 33);
             label2.TabIndex = 1;
@@ -72,7 +74,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(203, 241);
+            label3.Location = new Point(206, 238);
             label3.Name = "label3";
             label3.Size = new Size(50, 23);
             label3.TabIndex = 2;
@@ -84,7 +86,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(203, 206);
+            label4.Location = new Point(203, 185);
             label4.Name = "label4";
             label4.Size = new Size(132, 23);
             label4.TabIndex = 3;
@@ -96,7 +98,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(203, 171);
+            label5.Location = new Point(203, 150);
             label5.Name = "label5";
             label5.Size = new Size(120, 23);
             label5.TabIndex = 4;
@@ -108,7 +110,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(203, 136);
+            label6.Location = new Point(203, 115);
             label6.Name = "label6";
             label6.Size = new Size(106, 23);
             label6.TabIndex = 5;
@@ -120,7 +122,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(203, 372);
+            label7.Location = new Point(206, 369);
             label7.Name = "label7";
             label7.Size = new Size(198, 23);
             label7.TabIndex = 6;
@@ -132,7 +134,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(203, 338);
+            label8.Location = new Point(206, 335);
             label8.Name = "label8";
             label8.Size = new Size(193, 23);
             label8.TabIndex = 7;
@@ -144,7 +146,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(203, 307);
+            label9.Location = new Point(206, 304);
             label9.Name = "label9";
             label9.Size = new Size(193, 23);
             label9.TabIndex = 8;
@@ -156,7 +158,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.Black;
-            label10.Location = new Point(203, 274);
+            label10.Location = new Point(206, 271);
             label10.Name = "label10";
             label10.Size = new Size(190, 23);
             label10.TabIndex = 9;
@@ -168,7 +170,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Bahnschrift Condensed", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.Black;
-            label11.Location = new Point(333, 88);
+            label11.Location = new Point(333, 67);
             label11.Name = "label11";
             label11.Size = new Size(54, 24);
             label11.TabIndex = 10;
@@ -193,7 +195,7 @@
             label12.AutoSize = true;
             label12.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label12.ForeColor = Color.Black;
-            label12.Location = new Point(436, 134);
+            label12.Location = new Point(436, 113);
             label12.Name = "label12";
             label12.Size = new Size(54, 23);
             label12.TabIndex = 12;
@@ -205,7 +207,7 @@
             label13.AutoSize = true;
             label13.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label13.ForeColor = Color.Black;
-            label13.Location = new Point(436, 169);
+            label13.Location = new Point(436, 148);
             label13.Name = "label13";
             label13.Size = new Size(54, 23);
             label13.TabIndex = 13;
@@ -218,7 +220,7 @@
             label14.AutoSize = true;
             label14.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label14.ForeColor = Color.Black;
-            label14.Location = new Point(436, 203);
+            label14.Location = new Point(436, 182);
             label14.Name = "label14";
             label14.Size = new Size(54, 23);
             label14.TabIndex = 14;
@@ -230,7 +232,7 @@
             label15.AutoSize = true;
             label15.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label15.ForeColor = Color.Black;
-            label15.Location = new Point(435, 238);
+            label15.Location = new Point(438, 235);
             label15.Name = "label15";
             label15.Size = new Size(54, 23);
             label15.TabIndex = 15;
@@ -242,7 +244,7 @@
             label16.AutoSize = true;
             label16.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label16.ForeColor = Color.Black;
-            label16.Location = new Point(436, 271);
+            label16.Location = new Point(439, 268);
             label16.Name = "label16";
             label16.Size = new Size(53, 23);
             label16.TabIndex = 16;
@@ -254,7 +256,7 @@
             label17.AutoSize = true;
             label17.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label17.ForeColor = Color.Black;
-            label17.Location = new Point(436, 304);
+            label17.Location = new Point(439, 301);
             label17.Name = "label17";
             label17.Size = new Size(53, 23);
             label17.TabIndex = 17;
@@ -266,7 +268,7 @@
             label18.AutoSize = true;
             label18.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label18.ForeColor = Color.Black;
-            label18.Location = new Point(436, 338);
+            label18.Location = new Point(439, 335);
             label18.Name = "label18";
             label18.Size = new Size(54, 23);
             label18.TabIndex = 18;
@@ -278,7 +280,7 @@
             label19.AutoSize = true;
             label19.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label19.ForeColor = Color.Black;
-            label19.Location = new Point(436, 372);
+            label19.Location = new Point(439, 369);
             label19.Name = "label19";
             label19.Size = new Size(53, 23);
             label19.TabIndex = 19;
@@ -300,12 +302,38 @@
             pictureBox1.TabIndex = 54;
             pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(439, 208);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 23);
+            label1.TabIndex = 55;
+            label1.Text = "label1";
+            // 
+            // label20
+            // 
+            label20.Anchor = AnchorStyles.None;
+            label20.AutoSize = true;
+            label20.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label20.ForeColor = Color.Black;
+            label20.Location = new Point(204, 213);
+            label20.Name = "label20";
+            label20.Size = new Size(61, 23);
+            label20.TabIndex = 56;
+            label20.Text = "Número:";
+            // 
             // FormStep3Details
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(231, 234, 239);
             ClientSize = new Size(684, 461);
+            Controls.Add(label20);
+            Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(label19);
             Controls.Add(label18);
@@ -357,5 +385,7 @@
         private Label label19;
         private System.Windows.Forms.Timer InactivityTimer;
         private PictureBox pictureBox1;
+        private Label label1;
+        private Label label20;
     }
 }
